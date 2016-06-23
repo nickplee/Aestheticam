@@ -55,6 +55,7 @@ final class CameraViewController: BaseController {
     private func configureCamera() {
         camera.delegate = self
         camera.interfaceRotatesWithOrientation = false
+        camera.cameraDevice = Globals.persistedCaptureDevice
         fastttAddChildViewController(camera, belowSubview: controls)
         camera.view.autoPinEdgesToSuperviewEdges()
         camera.view.backgroundColor = UIColor.clearColor()
@@ -85,6 +86,7 @@ final class CameraViewController: BaseController {
         }
         
         camera.cameraDevice = newDevice
+        Globals.persistedCaptureDevice = newDevice
         
     }
     

@@ -7,10 +7,27 @@
 //
 
 import Foundation
+import FastttCamera
 
 struct Globals {
     
     static let apiURL = "http://api.nicholasleedesigns.com/aesthetic.php"
+    
+    static var persistedCaptureDevice: FastttCameraDevice {
+        get {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.synchronize()
+            guard let val = defaults.objectForKey("persistedCaptureDevice") as? Int, position = FastttCameraDevice(rawValue: val) else {
+                return .Rear
+            }
+            return position
+        }
+        set {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(newValue.rawValue, forKey: "persistedCaptureDevice")
+            defaults.synchronize()
+        }
+    }
     
     static var lastDownloadDate: NSDate {
         get {
