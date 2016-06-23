@@ -1,0 +1,53 @@
+PODS:
+  - ADTransitionController (1.1.1)
+  - Alamofire (3.4.0)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
+  - AudioKit (3.1.2)
+  - FastttCamera (0.3.4):
+    - FastttCamera/Default (= 0.3.4)
+  - FastttCamera/Default (0.3.4)
+  - Obsidian-UI-iOS (1.0.0)
+  - PureLayout (3.0.1)
+  - RandomKit (1.6.0)
+  - Realm (0.103.1):
+    - Realm/Headers (= 0.103.1)
+  - Realm/Headers (0.103.1)
+  - RealmSwift (0.103.1):
+    - Realm (= 0.103.1)
+  - Then (1.0.2)
+  - UIImageSwiftExtensions (2.0)
+  - Vivid (0.8)
+
+DEPENDENCIES:
+  - ADTransitionController (~> 1.1)
+  - Alamofire (~> 3.4)
+  - AlamofireImage
+  - AudioKit (~> 3.1)
+  - FastttCamera (~> 0.3)
+  - Obsidian-UI-iOS (~> 1.0)
+  - PureLayout (~> 3.0)
+  - RandomKit (~> 1.6)
+  - RealmSwift (~> 0.103)
+  - Then (~> 1.0)
+  - UIImageSwiftExtensions (~> 2.0)
+  - Vivid (~> 0.8)
+
+SPEC CHECKSUMS:
+  ADTransitionController: 72299d31488bcbe59fb87c483a89a637ebc819f8
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  AudioKit: 39a1b9e8f33c2af9a8b5de6e97b0d595effe4c5c
+  FastttCamera: 51f16712cbd5bdb08bc6231b957325c6be5e478d
+  Obsidian-UI-iOS: 4a3f922e618f787a06629395fdb1239b131c491e
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  RandomKit: 9b33ce5fc448056e8ddaaef655da315b26f23e32
+  Realm: 9ed57109332e95bdc48a7caedff80b70c51d5ef4
+  RealmSwift: 56629adb4acd2dc33eb2c8199fe856585dfd3ba3
+  Then: ad8e9b430e7bbb78da49457b4acc576947b2b3c1
+  UIImageSwiftExtensions: 242a72f0351decff0db99ca5fab62096d336d780
+  Vivid: 65d28aba89fc750fceda8172c8b233f27d0ac18b
+
+PODFILE CHECKSUM: fc4b309beb72e50a586b03173be6d15cf70be8c1
+
+COCOAPODS: 1.0.1
