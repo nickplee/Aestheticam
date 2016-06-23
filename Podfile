@@ -17,6 +17,7 @@ target 'Aestheticam' do
     pod 'Obsidian-UI-iOS', '~> 1.0'
     pod 'Then', '~> 1.0'
     pod 'Firebase', '~> 3.2'
+    pod 'Try', '~> 1.0'
 
 end
 

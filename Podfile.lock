@@ -33,6 +33,7 @@ PODS:
   - RealmSwift (0.103.1):
     - Realm (= 0.103.1)
   - Then (1.0.2)
+  - Try (1.0.0)
   - UIImageSwiftExtensions (2.0)
   - Vivid (0.8)
 
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - RandomKit (~> 1.6)
   - RealmSwift (~> 0.103)
   - Then (~> 1.0)
+  - Try (~> 1.0)
   - UIImageSwiftExtensions (~> 2.0)
   - Vivid (~> 0.8)
 
@@ -69,9 +71,10 @@ SPEC CHECKSUMS:
   Realm: 9ed57109332e95bdc48a7caedff80b70c51d5ef4
   RealmSwift: 56629adb4acd2dc33eb2c8199fe856585dfd3ba3
   Then: ad8e9b430e7bbb78da49457b4acc576947b2b3c1
+  Try: 9c890e41f43c0529641c27f42fa5a6be5217ab79
   UIImageSwiftExtensions: 242a72f0351decff0db99ca5fab62096d336d780
   Vivid: 65d28aba89fc750fceda8172c8b233f27d0ac18b
 
-PODFILE CHECKSUM: 74ae1f39a571d59c3d763c94a31155d4db99175c
+PODFILE CHECKSUM: 53855908bdefdcfb222cf3099ea3b62721bc8abc
 
 COCOAPODS: 1.0.1
