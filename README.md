@@ -1,6 +1,8 @@
 # Aestheticam
 
-I set out to create the worst camera app in the world.  I think I succeeded.
+I set out to create the worst camera app in the world.  I think I succeeded.  Here's a demo:
+
+![](http://i.imgur.com/mTpKxSW.gif)
 
 # Building
 
