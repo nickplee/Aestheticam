@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E70CD706CDAB08B360BA648 /* Pods_Aestheticam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79135688CA8162CDE7D0FD9A /* Pods_Aestheticam.framework */; };
-		B85362D51D1B9D3300EEBFF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85362D41D1B9D3300EEBFF9 /* GoogleService-Info.plist */; };
 		B85362D71D1B9DA400EEBFF9 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85362D61D1B9DA400EEBFF9 /* Analytics.swift */; };
+		B85362D91D1BA4E200EEBFF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B85362D81D1BA4E200EEBFF9 /* GoogleService-Info.plist */; };
 		B89547501D1B8E120025FBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B895474E1D1B8E120025FBF0 /* Main.storyboard */; };
 		B89547521D1B8E120025FBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89547511D1B8E120025FBF0 /* Assets.xcassets */; };
 		B89547551D1B8E120025FBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89547531D1B8E120025FBF0 /* LaunchScreen.storyboard */; };
@@ -39,8 +39,8 @@
 		10627CA52DA8E460B4FFB36F /* Pods-Aestheticam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aestheticam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aestheticam/Pods-Aestheticam.release.xcconfig"; sourceTree = "<group>"; };
 		79135688CA8162CDE7D0FD9A /* Pods_Aestheticam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aestheticam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47F4DF5B1B28C26EE476EB7 /* Pods-Aestheticam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aestheticam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aestheticam/Pods-Aestheticam.debug.xcconfig"; sourceTree = "<group>"; };
-		B85362D41D1B9D3300EEBFF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B85362D61D1B9DA400EEBFF9 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		B85362D81D1BA4E200EEBFF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B89547471D1B8E120025FBF0 /* Aestheticam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aestheticam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B895474F1D1B8E120025FBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B89547511D1B8E120025FBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		B895478B1D1B8EB00025FBF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B85362D41D1B9D3300EEBFF9 /* GoogleService-Info.plist */,
+				B85362D81D1BA4E200EEBFF9 /* GoogleService-Info.plist */,
 				B89547561D1B8E120025FBF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -284,7 +284,7 @@
 				B89547551D1B8E120025FBF0 /* LaunchScreen.storyboard in Resources */,
 				B89547521D1B8E120025FBF0 /* Assets.xcassets in Resources */,
 				B89547881D1B8EA90025FBF0 /* snd3.aiff in Resources */,
-				B85362D51D1B9D3300EEBFF9 /* GoogleService-Info.plist in Resources */,
+				B85362D91D1BA4E200EEBFF9 /* GoogleService-Info.plist in Resources */,
 				B89547501D1B8E120025FBF0 /* Main.storyboard in Resources */,
 				B89547841D1B8EA90025FBF0 /* chill.mp3 in Resources */,
 			);
@@ -474,10 +474,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Aestheticam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.Aestheticam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.aestheticam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "01498ee0-a79b-496c-aef0-1ca6247bf9e5";
 			};
 			name = Debug;
 		};
@@ -486,12 +488,13 @@
 			baseConfigurationReference = 10627CA52DA8E460B4FFB36F /* Pods-Aestheticam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nicholas Lee Designs, LLC (Q5XB9QXRZG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nicholas Lee Designs, LLC (Q5XB9QXRZG)";
 				INFOPLIST_FILE = Aestheticam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.Aestheticam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.aestheticam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "01498ee0-a79b-496c-aef0-1ca6247bf9e5";
 			};
 			name = Release;
 		};
