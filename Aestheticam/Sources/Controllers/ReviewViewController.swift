@@ -60,7 +60,9 @@ final class ReviewViewController: BaseController {
             return
         }
         
-        let controller = UIActivityViewController(activityItems: [img], applicationActivities: nil)
+        let text = "I created my A E S T H E T I C with #aestheticam"
+        
+        let controller = UIActivityViewController(activityItems: [text, img], applicationActivities: nil)
         
         controller.completionWithItemsHandler = { (activity, success, items, error) -> Void in
             
