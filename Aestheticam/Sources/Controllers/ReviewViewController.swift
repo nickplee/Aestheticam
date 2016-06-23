@@ -49,6 +49,7 @@ final class ReviewViewController: BaseController {
     override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
             performSegueWithIdentifier("process", sender: self)
+            LogEvent("shake_reprocess")
         }
     }
     
@@ -58,8 +59,30 @@ final class ReviewViewController: BaseController {
         guard let img = image else {
             return
         }
+        
         let controller = UIActivityViewController(activityItems: [img], applicationActivities: nil)
-        presentViewController(controller, animated: true, completion: nil)
+        
+        controller.completionWithItemsHandler = { (activity, success, items, error) -> Void in
+            
+            guard error == nil else {
+                return
+            }
+            
+            var params: [String : NSObject] = [
+                "success" : success
+            ]
+            
+            if let a = activity {
+                params["activity"] = a
+            }
+            
+            LogEvent("share", params)
+            
+        }
+        
+        presentViewController(controller, animated: true) {
+            LogEvent("began_share")
+        }
     }
     
 }

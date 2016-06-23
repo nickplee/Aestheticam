@@ -88,11 +88,14 @@ final class CameraViewController: BaseController {
         camera.cameraDevice = newDevice
         Globals.persistedCaptureDevice = newDevice
         
+        LogEvent("toggle_camera", ["camera" : newDevice.rawValue])
+        
     }
     
     @IBAction private func takePhoto(sender: AnyObject?) {
         camera.view.hidden = true
         camera.takePicture()
+        LogEvent("take_photo")
     }
     
 }
@@ -100,8 +103,10 @@ final class CameraViewController: BaseController {
 // MARK: FastttCameraDelegate
 extension CameraViewController: FastttCameraDelegate {
     func cameraController(cameraController: FastttCameraInterface!, didFinishNormalizingCapturedImage capturedImage: FastttCapturedImage!) {
-        image = capturedImage.scaledImage
+        let scaledImage = capturedImage.scaledImage
+        image = scaledImage
         dispatch_async(dispatch_get_main_queue()) {
+            LogEvent("image_size", ["size": String(scaledImage.size)])
             self.performSegueWithIdentifier("process", sender: self)
         }
     }

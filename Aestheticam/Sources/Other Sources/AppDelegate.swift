@@ -12,6 +12,7 @@ import AVFoundation
 import Then
 import Obsidian_UI_iOS
 import RandomKit
+import Firebase
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -30,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Delegate Methods
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        FIRApp.configure()
         
         if let nav = window?.rootViewController as? UINavigationController {
             nav.delegate = navDelegate
