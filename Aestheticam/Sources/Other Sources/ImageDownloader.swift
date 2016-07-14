@@ -26,6 +26,29 @@ final class ImageDownloader {
     
     private init() {}
     
+    // MARK: DB
+    
+    private class func ImageRealm() throws -> Realm {
+        
+        let folder = NSSearchPathForDirectoriesInDomains(.LibraryDirectory, .UserDomainMask, true)[0] as NSString
+        let realmPath = folder.stringByAppendingPathComponent("data.realm")
+        let realmURL = NSURL(fileURLWithPath: realmPath)
+        
+        var config = Realm.Configuration()
+        config.fileURL = realmURL
+        
+        let realm = try Realm(configuration: config)
+        
+        defer {
+            do {
+                try realmURL.setResourceValue(true, forKey: NSURLIsExcludedFromBackupKey)
+            }
+            catch {}
+        }
+        
+        return realm
+    }
+    
     // MARK: Download
     
     func download() {
@@ -55,7 +78,7 @@ final class ImageDownloader {
                     return
                 }
                 dispatch_async(ImageDownloader.saveQueue) {
-                    let realm = try! Realm()
+                    let realm = try! self.dynamicType.ImageRealm()
                     guard let data = UIImagePNGRepresentation(image) else {
                         return
                     }
@@ -85,8 +108,7 @@ final class ImageDownloader {
     // MARK: Random
     
     func getRandomImage() -> UIImage? {
-        
-        guard let realm = try? Realm(), entry = realm.objects(Image).random else {
+        guard let realm = try? self.dynamicType.ImageRealm(), entry = realm.objects(Image).random else {
             return nil
         }
         return UIImage(data: entry.data)
