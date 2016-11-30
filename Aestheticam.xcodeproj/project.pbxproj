@@ -34,6 +34,7 @@
 		B89547891D1B8EA90025FBF0 /* snd4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B89547831D1B8EA90025FBF0 /* snd4.aiff */; };
 		B89F9CC81DEE66780024D263 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CC71DEE66780024D263 /* IntExtensions.swift */; };
 		B89F9CCA1DEE678B0024D263 /* FeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */; };
+		B89F9CCC1DEE9EDE0024D263 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CCB1DEE9EDE0024D263 /* AdManager.swift */; };
 		B8B921111D20EC4C00409290 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8B921101D20EC4C00409290 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		B89547831D1B8EA90025FBF0 /* snd4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = snd4.aiff; sourceTree = "<group>"; };
 		B89F9CC71DEE66780024D263 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/Extensions/IntExtensions.swift; sourceTree = "<group>"; };
 		B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackGenerator.swift; sourceTree = "<group>"; };
+		B89F9CCB1DEE9EDE0024D263 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		B8B921101D20EC4C00409290 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				B895476E1D1B8E850025FBF0 /* Synthesizer.swift */,
 				B85362D61D1B9DA400EEBFF9 /* Analytics.swift */,
 				B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */,
+				B89F9CCB1DEE9EDE0024D263 /* AdManager.swift */,
 			);
 			name = "Other Sources";
 			path = "Sources/Other Sources";
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89F9CCC1DEE9EDE0024D263 /* AdManager.swift in Sources */,
 				B895477C1D1B8E850025FBF0 /* Synthesizer.swift in Sources */,
 				B895476F1D1B8E850025FBF0 /* BaseController.swift in Sources */,
 				B89547791D1B8E850025FBF0 /* ImageProcessor.swift in Sources */,
