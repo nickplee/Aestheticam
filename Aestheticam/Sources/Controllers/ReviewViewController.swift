@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 final class ReviewViewController: BaseController {
     
@@ -20,6 +21,10 @@ final class ReviewViewController: BaseController {
     var image: UIImage?
     var originalImage: UIImage?
     
+    // MARK: Private Properties
+    
+    fileprivate var interstitial: GADInterstitial?
+    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -29,8 +34,11 @@ final class ReviewViewController: BaseController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         becomeFirstResponder()
         Synthesizer.shared.playAesthetic()
+        
+        showAdIfNeeded()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,6 +46,16 @@ final class ReviewViewController: BaseController {
             dest.image = originalImage
             image = nil
         }
+    }
+    
+    // MARK: Ad Display
+    
+    private func showAdIfNeeded() {
+        guard interstitial == nil, AdManager.shared.shouldShowAd, let inter = AdManager.shared.createInterstitial(with: .AfterCapture) else {
+            return
+        }
+        inter.delegate = self
+        interstitial = inter
     }
     
     // MARK: Shaking
@@ -87,4 +105,14 @@ final class ReviewViewController: BaseController {
         }
     }
     
+}
+
+extension ReviewViewController: GADInterstitialDelegate {
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        guard ad == interstitial else {
+            return
+        }
+        ad.present(fromRootViewController: self)
+        AdManager.shared.adWasShown()
+    }
 }

@@ -52,7 +52,9 @@ final class Synthesizer {
                 return nil
             }
         }
-        
+    }
+    
+    func startEngine() {
         AudioKit.start()
     }
     

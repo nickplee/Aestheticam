@@ -48,6 +48,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        Synthesizer.shared.startEngine()
         AdManager.shared.reset()
         player.play()
     }
