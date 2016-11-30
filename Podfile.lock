@@ -9,6 +9,9 @@ PODS:
   - FastttCamera/Default (0.3.4)
   - Firebase (3.10.0):
     - Firebase/Core (= 3.10.0)
+  - Firebase/AdMob (3.10.0):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (= 7.15.0)
   - Firebase/Core (3.10.0):
     - FirebaseAnalytics (= 3.6.0)
     - FirebaseCore (= 3.4.5)
@@ -22,6 +25,7 @@ PODS:
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (1.0.8)
+  - Google-Mobile-Ads-SDK (7.15.0)
   - GoogleInterchangeUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
   - GoogleSymbolUtilities (1.1.2)
@@ -47,6 +51,7 @@ DEPENDENCIES:
   - AudioKit (~> 3.1)
   - FastttCamera (~> 0.3)
   - Firebase (~> 3.10)
+  - Firebase/AdMob
   - PureLayout (~> 3.0)
   - RandomKit (~> 2.3)
   - RealmSwift (~> 2.1)
@@ -74,6 +79,7 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
   FirebaseCore: 1e383fdfe37b6b5d6ff88e84204bdee30276af0f
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  Google-Mobile-Ads-SDK: 75d41dfcf06f7666ab211573d212768b0f766c5d
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
@@ -86,6 +92,6 @@ SPEC CHECKSUMS:
   UIImageSwiftExtensions: 1d56060dc6e955471b63520cd60c26aeebb0c440
   Vivid: 65d28aba89fc750fceda8172c8b233f27d0ac18b
 
-PODFILE CHECKSUM: 344fbc3192212b4578fc2ced61ae2917eb080cf3
+PODFILE CHECKSUM: 796de2b4ef294fc047b8e79a25c5d7d6bc4bee87
 
 COCOAPODS: 1.1.1

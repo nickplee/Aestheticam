@@ -16,6 +16,7 @@ target 'Aestheticam' do
     pod 'AudioKit', '~> 3.1'
     pod 'Then', '~> 2.1'
     pod 'Firebase', '~> 3.10'
+    pod 'Firebase/AdMob'
     pod 'Try', '~> 2.0'
 
 end

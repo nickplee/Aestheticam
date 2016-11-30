@@ -7,6 +7,7 @@ build/
 DerivedData/
 
 GoogleService-Info.plist
+Ads.plist
 
 ## Various settings
 *.pbxuser
