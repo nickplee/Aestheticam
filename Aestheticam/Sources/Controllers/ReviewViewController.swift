@@ -41,6 +41,11 @@ final class ReviewViewController: BaseController {
         showAdIfNeeded()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        cancelAd()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? ProcessViewController, segue.identifier == "process" {
             dest.image = originalImage
@@ -56,6 +61,11 @@ final class ReviewViewController: BaseController {
         }
         inter.delegate = self
         interstitial = inter
+    }
+    
+    private func cancelAd() {
+        interstitial?.delegate = nil
+        interstitial = nil
     }
     
     // MARK: Shaking
