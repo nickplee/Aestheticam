@@ -84,7 +84,7 @@ final class ProcessViewController: BaseController {
     private func enqueue(_ sleep: Bool = false, _ block: @escaping () -> ())  {
         opMutex.wait()
         let op = BlockOperation {
-            Synthesizer.sharedInstance.play()
+            Synthesizer.shared.play()
             block()
             if sleep {
                 Thread.sleep(forTimeInterval: 0.02)
@@ -92,7 +92,7 @@ final class ProcessViewController: BaseController {
             else {
                 Thread.sleep(forTimeInterval: 0.001)
             }
-            Synthesizer.sharedInstance.stop()
+            Synthesizer.shared.stop()
         }
         op.completionBlock = {
             self.opMutex.wait()

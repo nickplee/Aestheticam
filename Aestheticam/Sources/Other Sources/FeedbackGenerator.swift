@@ -32,9 +32,13 @@ struct FeedbackGenerator {
         next()
     }
     
+    func fire() {
+        generators.randomElement().trigger()
+    }
+    
     private func next() {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(within: 1...4))) {
-            self.generators.randomElement().trigger()
+            self.fire()
             self.next()
         }
     }

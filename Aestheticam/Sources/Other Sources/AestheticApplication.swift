@@ -20,10 +20,13 @@ final class AestheticApplication: UIApplication {
         
         if event.type == .touches, let touches = event.touches(for: w) {
             if let _ = touches.filter({ $0.phase == .began }).first {
-                Synthesizer.sharedInstance.play(true)
+                Synthesizer.shared.play(true)
+                if #available(iOS 10, *) {
+                    FeedbackGenerator.shared.fire()
+                }
             }
             else if let _ = touches.filter({ $0.phase  == .ended || $0.phase == .cancelled }).first {
-                Synthesizer.sharedInstance.stop(true)
+                Synthesizer.shared.stop(true)
             }
         }
         

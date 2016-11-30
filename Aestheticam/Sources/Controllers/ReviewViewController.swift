@@ -30,7 +30,7 @@ final class ReviewViewController: BaseController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         becomeFirstResponder()
-        Synthesizer.sharedInstance.playAesthetic()
+        Synthesizer.shared.playAesthetic()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

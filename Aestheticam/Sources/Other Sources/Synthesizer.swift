@@ -13,7 +13,7 @@ import Then
 
 final class Synthesizer {
     
-    static let sharedInstance = Synthesizer()
+    static let shared = Synthesizer()
     
     private static let noteRange = 24...84
     
