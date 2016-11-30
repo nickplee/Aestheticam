@@ -15,38 +15,38 @@ struct Globals {
     
     static var persistedCaptureDevice: FastttCameraDevice {
         get {
-            let defaults = NSUserDefaults.standardUserDefaults()
+            let defaults = UserDefaults.standard
             defaults.synchronize()
-            guard let val = defaults.objectForKey("persistedCaptureDevice") as? Int, position = FastttCameraDevice(rawValue: val) else {
-                return .Rear
+            guard let val = defaults.object(forKey: "persistedCaptureDevice") as? Int, let position = FastttCameraDevice(rawValue: val) else {
+                return .rear
             }
             return position
         }
         set {
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(newValue.rawValue, forKey: "persistedCaptureDevice")
+            let defaults = UserDefaults.standard
+            defaults.set(newValue.rawValue, forKey: "persistedCaptureDevice")
             defaults.synchronize()
         }
     }
     
-    static var lastDownloadDate: NSDate {
+    static var lastDownloadDate: Date {
         get {
-            let defaults = NSUserDefaults.standardUserDefaults()
+            let defaults = UserDefaults.standard
             defaults.synchronize()
-            return (defaults.objectForKey("lastDownloadDate") as? NSDate) ?? NSDate.distantPast()
+            return (defaults.object(forKey: "lastDownloadDate") as? Date) ?? Date.distantPast
         }
         set {
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(newValue, forKey: "lastDownloadDate")
+            let defaults = UserDefaults.standard
+            defaults.set(newValue, forKey: "lastDownloadDate")
             defaults.synchronize()
         }
     }
     
-    static let downloadThreshold: NSTimeInterval = 60 * 60 * 24 * 3 // every three days
+    static let downloadThreshold: TimeInterval = 60 * 60 * 24 * 3 // every three days
     
     static var needsDownload: Bool {
         get {
-            return NSDate().timeIntervalSinceDate(lastDownloadDate) >= downloadThreshold
+            return Date().timeIntervalSince(lastDownloadDate) >= downloadThreshold
         }
     }
     

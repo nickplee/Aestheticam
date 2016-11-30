@@ -11,19 +11,22 @@ import UIKit
 
 final class AestheticApplication: UIApplication {
     
-    override func sendEvent(event: UIEvent) {
+    override func sendEvent(_ event: UIEvent) {
         super.sendEvent(event)
         
         guard let w = keyWindow else {
             return
         }
         
-        if event.type == .Touches, let touches = event.touchesForWindow(w) {
-            if let _ = touches.filter({ $0.phase == .Began }).first {
-                Synthesizer.sharedInstance.play(true)
+        if event.type == .touches, let touches = event.touches(for: w) {
+            if let _ = touches.filter({ $0.phase == .began }).first {
+                Synthesizer.shared.play(true)
+                if #available(iOS 10, *) {
+                    FeedbackGenerator.shared.fire()
+                }
             }
-            else if let _ = touches.filter({ $0.phase  == .Ended || $0.phase == .Cancelled }).first {
-                Synthesizer.sharedInstance.stop(true)
+            else if let _ = touches.filter({ $0.phase  == .ended || $0.phase == .cancelled }).first {
+                Synthesizer.shared.stop(true)
             }
         }
         

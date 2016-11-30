@@ -12,24 +12,24 @@ import ADTransitionController
 
 class BaseController: ADTransitioningViewController {
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
-    private let trans = ADCubeTransition(duration: 0.5, orientation: ADTransitionRightToLeft, sourceRect: UIScreen.mainScreen().bounds)
+    private let trans = ADCubeTransition(duration: 0.5, orientation: ADTransitionRightToLeft, sourceRect: UIScreen.main.bounds)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         transition = trans
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         transition = trans
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .Portrait
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return .portrait
     }
     
     

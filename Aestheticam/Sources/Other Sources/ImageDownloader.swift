@@ -20,7 +20,7 @@ final class ImageDownloader {
     
     // MARK: Private Properties
     
-    private static let saveQueue = dispatch_queue_create("com.nicholasleedesigns.aestheticam.save", DISPATCH_QUEUE_SERIAL)
+    private static let saveQueue = DispatchQueue(label: "com.nicholasleedesigns.aestheticam.save", attributes: [])
     
     // MARK: Initialiaztion
     
@@ -30,9 +30,9 @@ final class ImageDownloader {
     
     private class func ImageRealm() throws -> Realm {
         
-        let folder = NSSearchPathForDirectoriesInDomains(.LibraryDirectory, .UserDomainMask, true)[0] as NSString
-        let realmPath = folder.stringByAppendingPathComponent("data.realm")
-        let realmURL = NSURL(fileURLWithPath: realmPath)
+        let folder = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] as NSString
+        let realmPath = folder.appendingPathComponent("data.realm")
+        var realmURL = URL(fileURLWithPath: realmPath)
         
         var config = Realm.Configuration()
         config.fileURL = realmURL
@@ -41,7 +41,9 @@ final class ImageDownloader {
         
         defer {
             do {
-                try realmURL.setResourceValue(true, forKey: NSURLIsExcludedFromBackupKey)
+                var values = URLResourceValues()
+                values.isExcludedFromBackup = true
+                try realmURL.setResourceValues(values)
             }
             catch {}
         }
@@ -59,43 +61,43 @@ final class ImageDownloader {
         
         let url = Globals.apiURL
         
-        request(.GET, url).responseJSON { result in
-            guard let v = result.result.value as? [String: AnyObject], images = v["images"] as? [String] else {
+        request(url).responseJSON { result in
+            guard let v = result.result.value as? [String: AnyObject], let images = v["images"] as? [String] else {
                 return
             }
-            let urls = images.flatMap({ NSURL(string: $0) })
+            let urls = images.flatMap(URL.init(string:))
             self.getImages(urls)
-            Globals.lastDownloadDate = NSDate()
+            Globals.lastDownloadDate = Date()
         }
         
     }
     
-    private func getImages(urls: [NSURL]) {
-        let requests = urls.map({ request(.GET, $0) })
+    private func getImages(_ urls: [URL]) {
+        let requests = urls.map({ request($0) })
         requests.forEach {
             $0.responseImage { result in
                 guard let image = result.result.value else {
                     return
                 }
-                dispatch_async(ImageDownloader.saveQueue) {
-                    let realm = try! self.dynamicType.ImageRealm()
+                ImageDownloader.saveQueue.async {
+                    let realm = try! type(of: self).ImageRealm()
                     guard let data = UIImagePNGRepresentation(image) else {
                         return
                     }
                     do {
                         
-                        let urlString = result.request!.URLString
+                        let urlString = result.request!.url!.absoluteString
                         
                         let pred = NSPredicate(format: "%K = %@", argumentArray: ["url", urlString])
                         
-                        guard realm.objects(Image).filter(pred).first == nil else {
+                        guard realm.objects(Image.self).filter(pred).first == nil else {
                             return
                         }
                         
                         try realm.write {
                             let img = Image()
                             img.data = data
-                            img.url = result.request!.URLString
+                            img.url = urlString
                             realm.add(img)
                         }
                     }
@@ -108,7 +110,7 @@ final class ImageDownloader {
     // MARK: Random
     
     func getRandomImage() -> UIImage? {
-        guard let realm = try? self.dynamicType.ImageRealm(), entry = realm.objects(Image).random else {
+        guard let realm = try? type(of: self).ImageRealm(), let entry = realm.objects(Image.self).random else {
             return nil
         }
         return UIImage(data: entry.data)

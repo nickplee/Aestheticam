@@ -30,19 +30,19 @@ final class ProcessViewController: BaseController {
     // MARK: Private Properties
     
     private let imageView = UIImageView()
-    private var lastImageTime = NSDate()
-    private var opQueue = NSOperationQueue()
+    private var lastImageTime = Date()
+    private var opQueue = OperationQueue()
     private var processed = false
     private var processor: ImageProcessor!
-    private var opMutex = dispatch_semaphore_create(1)
+    private var opMutex = DispatchSemaphore(value: 1)
     private var operations: Int = 0
     private var progress: Int = 0 {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) {
-                dispatch_semaphore_wait(self.opMutex, DISPATCH_TIME_FOREVER)
+            DispatchQueue.main.async {
+                self.opMutex.wait()
                 let prog = self.progress
                 let tot = self.operations
-                dispatch_semaphore_signal(self.opMutex)
+                self.opMutex.signal()
                 self.handleProgress(prog, total: tot)
             }
         }
@@ -67,13 +67,13 @@ final class ProcessViewController: BaseController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = segue.destinationViewController as? ReviewViewController where segue.identifier == "review" {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? ReviewViewController, segue.identifier == "review" {
             controller.image = processor.outputImage
             controller.originalImage = image
         }
@@ -81,26 +81,26 @@ final class ProcessViewController: BaseController {
     
     // MARK: Queue
     
-    private func enqueue(sleep: Bool = false, _ block: () -> ())  {
-        dispatch_semaphore_wait(opMutex, DISPATCH_TIME_FOREVER)
-        let op = NSBlockOperation {
-            Synthesizer.sharedInstance.play()
+    private func enqueue(_ sleep: Bool = false, _ block: @escaping () -> ())  {
+        opMutex.wait()
+        let op = BlockOperation {
+            Synthesizer.shared.play()
             block()
             if sleep {
-                NSThread.sleepForTimeInterval(0.02)
+                Thread.sleep(forTimeInterval: 0.02)
             }
             else {
-                NSThread.sleepForTimeInterval(0.001)
+                Thread.sleep(forTimeInterval: 0.001)
             }
-            Synthesizer.sharedInstance.stop()
+            Synthesizer.shared.stop()
         }
         op.completionBlock = {
-            dispatch_semaphore_wait(self.opMutex, DISPATCH_TIME_FOREVER)
+            self.opMutex.wait()
             self.progress += 1
-            dispatch_semaphore_signal(self.opMutex)
+            self.opMutex.signal()
         }
         operations += 1
-        dispatch_semaphore_signal(opMutex)
+        opMutex.signal()
         opQueue.addOperation(op)
     }
     
@@ -123,67 +123,69 @@ final class ProcessViewController: BaseController {
         
         processed = true
         
-        opQueue.suspended = true
+        opQueue.isSuspended = true
         
-        let p = processor
+        guard let p = processor else {
+            return
+        }
         
         enqueue {
-            p.apply(.Starfield)
+            p.apply(.starfield)
         }
         
-        for _ in 0 ..< Int.random(0...1000) {
+        for _ in 0 ..< Int.random(within: 0...1000) {
             enqueue {
-                p.apply(.Sprinkle)
+                p.apply(.sprinkle)
             }
         }
         
-        for _ in 0 ..< Int.random(1 ... 3) {
+        for _ in 0 ..< Int.random(within: 1 ... 3) {
             enqueue(true) {
-                Int.random(0 ... 4) == 2 ? p.apply(.Copy) : p.apply(.CopyTint)
+                Int.random(within: 0 ... 4) == 2 ? p.apply(.copy) : p.apply(.copyTint)
             }
         }
         
-        for _ in 0 ..< Int.random(1 ... 3) {
+        for _ in 0 ..< Int.random(within: 1 ... 3) {
             enqueue(true) {
-                p.apply(.FaceMash)
+                p.apply(.faceMash)
             }
         }
         
-        for _ in 0 ..< Int.random(1 ... 3) {
+        for _ in 0 ..< Int.random(within: 1 ... 3) {
             enqueue(true) {
-                p.apply(.PlaceImage)
+                p.apply(.placeImage)
             }
         }
         
-        opQueue.suspended = false
+        opQueue.isSuspended = false
         
     }
     
-    private func handleProgress(completed: Int, total: Int) {
+    private func handleProgress(_ completed: Int, total: Int) {
         
         let percent = CGFloat(completed) / CGFloat(total)
         
-        self.imageView.transform = CGAffineTransformMakeScale(1.0 + percent, 1.0 + percent)
+        self.imageView.transform = CGAffineTransform(scaleX: 1.0 + percent, y: 1.0 + percent)
         
         colorView.backgroundColor = UIColor.neonColors.random
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+        DispatchQueue.global(qos: .background).async {
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
         }
         
-        if let image = ImageDownloader.sharedInstance.getRandomImage() where NSDate().timeIntervalSinceDate(lastImageTime) >= 0.25 {
+        if let image = ImageDownloader.sharedInstance.getRandomImage(), Date().timeIntervalSince(lastImageTime) >= 0.25 {
             let size = image.size
             let imageView = UIImageView(image: image)
-            imageView.alpha = CGFloat.random(0.25...0.75)
+            imageView.alpha = CGFloat.random(within: 0.25...0.75)
             imageView.frame = CGRect(origin: CGPoint.zero, size: size)
-            imageView.center = CGPoint.random(0...CGFloat.NativeType(view.frame.width), 0...CGFloat.NativeType(view.frame.height))
+            imageView.center = CGPoint.random(within: 0.0...CGFloat(view.frame.width), 0.0...CGFloat(view.frame.height))
             view.addSubview(imageView)
-            lastImageTime = NSDate()
+            lastImageTime = Date()
         }
         
         if completed == total {
-            performSegueWithIdentifier("review", sender: self)
+            performSegue(withIdentifier: "review", sender: self)
         }
     }
     

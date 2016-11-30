@@ -32,6 +32,10 @@
 		B89547871D1B8EA90025FBF0 /* snd2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B89547811D1B8EA90025FBF0 /* snd2.aiff */; };
 		B89547881D1B8EA90025FBF0 /* snd3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B89547821D1B8EA90025FBF0 /* snd3.aiff */; };
 		B89547891D1B8EA90025FBF0 /* snd4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B89547831D1B8EA90025FBF0 /* snd4.aiff */; };
+		B89F9CC81DEE66780024D263 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CC71DEE66780024D263 /* IntExtensions.swift */; };
+		B89F9CCA1DEE678B0024D263 /* FeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */; };
+		B89F9CCC1DEE9EDE0024D263 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CCB1DEE9EDE0024D263 /* AdManager.swift */; };
+		B89F9CCE1DEEA5860024D263 /* Ads.plist in Resources */ = {isa = PBXBuildFile; fileRef = B89F9CCD1DEEA5860024D263 /* Ads.plist */; };
 		B8B921111D20EC4C00409290 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8B921101D20EC4C00409290 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +53,7 @@
 		B89547601D1B8E850025FBF0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B89547611D1B8E850025FBF0 /* ProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		B89547621D1B8E850025FBF0 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
-		B89547641D1B8E850025FBF0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		B89547641D1B8E850025FBF0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = ../Models/Image.swift; sourceTree = "<group>"; };
 		B89547661D1B8E850025FBF0 /* AestheticApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AestheticApplication.swift; sourceTree = "<group>"; };
 		B89547671D1B8E850025FBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89547681D1B8E850025FBF0 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -65,6 +69,10 @@
 		B89547811D1B8EA90025FBF0 /* snd2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = snd2.aiff; sourceTree = "<group>"; };
 		B89547821D1B8EA90025FBF0 /* snd3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = snd3.aiff; sourceTree = "<group>"; };
 		B89547831D1B8EA90025FBF0 /* snd4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = snd4.aiff; sourceTree = "<group>"; };
+		B89F9CC71DEE66780024D263 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/Extensions/IntExtensions.swift; sourceTree = "<group>"; };
+		B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackGenerator.swift; sourceTree = "<group>"; };
+		B89F9CCB1DEE9EDE0024D263 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		B89F9CCD1DEEA5860024D263 /* Ads.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ads.plist; sourceTree = SOURCE_ROOT; };
 		B8B921101D20EC4C00409290 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -127,6 +135,7 @@
 		B895475C1D1B8E630025FBF0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B89F9CC61DEE66670024D263 /* Extensions */,
 				B895475E1D1B8E850025FBF0 /* Controllers */,
 				B89547631D1B8E850025FBF0 /* Models */,
 				B89547651D1B8E850025FBF0 /* Other Sources */,
@@ -159,7 +168,6 @@
 		B89547631D1B8E850025FBF0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B89547641D1B8E850025FBF0 /* Image.swift */,
 			);
 			name = Models;
 			path = Sources/Models;
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B895476C1D1B8E850025FBF0 /* main.swift */,
+				B89547641D1B8E850025FBF0 /* Image.swift */,
 				B89547661D1B8E850025FBF0 /* AestheticApplication.swift */,
 				B89547671D1B8E850025FBF0 /* AppDelegate.swift */,
 				B89547681D1B8E850025FBF0 /* Colors.swift */,
@@ -178,6 +187,8 @@
 				B895476D1D1B8E850025FBF0 /* ReplaceSegue.swift */,
 				B895476E1D1B8E850025FBF0 /* Synthesizer.swift */,
 				B85362D61D1B9DA400EEBFF9 /* Analytics.swift */,
+				B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */,
+				B89F9CCB1DEE9EDE0024D263 /* AdManager.swift */,
 			);
 			name = "Other Sources";
 			path = "Sources/Other Sources";
@@ -209,10 +220,19 @@
 		B895478B1D1B8EB00025FBF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B89F9CCD1DEEA5860024D263 /* Ads.plist */,
 				B8B921101D20EC4C00409290 /* GoogleService-Info.plist */,
 				B89547561D1B8E120025FBF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B89F9CC61DEE66670024D263 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B89F9CC71DEE66780024D263 /* IntExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,12 +266,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Nicholas Lee Designs, LLC";
 				TargetAttributes = {
 					B89547461D1B8E120025FBF0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = Q5XB9QXRZG;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -286,6 +308,7 @@
 				B89547521D1B8E120025FBF0 /* Assets.xcassets in Resources */,
 				B89547881D1B8EA90025FBF0 /* snd3.aiff in Resources */,
 				B8B921111D20EC4C00409290 /* GoogleService-Info.plist in Resources */,
+				B89F9CCE1DEEA5860024D263 /* Ads.plist in Resources */,
 				B89547501D1B8E120025FBF0 /* Main.storyboard in Resources */,
 				B89547841D1B8EA90025FBF0 /* chill.mp3 in Resources */,
 			);
@@ -321,7 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B8B9210F1D20EC1F00409290 /* Fix AudioKit Framework */ = {
@@ -360,15 +383,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89F9CCC1DEE9EDE0024D263 /* AdManager.swift in Sources */,
 				B895477C1D1B8E850025FBF0 /* Synthesizer.swift in Sources */,
 				B895476F1D1B8E850025FBF0 /* BaseController.swift in Sources */,
 				B89547791D1B8E850025FBF0 /* ImageProcessor.swift in Sources */,
 				B895477A1D1B8E850025FBF0 /* main.swift in Sources */,
 				B89547761D1B8E850025FBF0 /* Colors.swift in Sources */,
 				B895477B1D1B8E850025FBF0 /* ReplaceSegue.swift in Sources */,
+				B89F9CCA1DEE678B0024D263 /* FeedbackGenerator.swift in Sources */,
 				B89547701D1B8E850025FBF0 /* CameraViewController.swift in Sources */,
 				B89547721D1B8E850025FBF0 /* ReviewViewController.swift in Sources */,
 				B85362D71D1B9DA400EEBFF9 /* Analytics.swift in Sources */,
+				B89F9CC81DEE66780024D263 /* IntExtensions.swift in Sources */,
 				B89547711D1B8E850025FBF0 /* ProcessViewController.swift in Sources */,
 				B89547751D1B8E850025FBF0 /* AppDelegate.swift in Sources */,
 				B89547781D1B8E850025FBF0 /* ImageDownloader.swift in Sources */,
@@ -414,10 +440,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -459,10 +488,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -479,6 +511,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -487,14 +520,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A47F4DF5B1B28C26EE476EB7 /* Pods-Aestheticam.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q5XB9QXRZG;
 				INFOPLIST_FILE = Aestheticam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.aestheticam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -502,14 +538,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10627CA52DA8E460B4FFB36F /* Pods-Aestheticam.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q5XB9QXRZG;
 				INFOPLIST_FILE = Aestheticam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.aestheticam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
