@@ -26,7 +26,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         $0.numberOfLoops = -1
         $0.volume = 0.1
     }
-    
+
     // MARK: Delegate Methods
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -39,6 +39,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         ImageDownloader.sharedInstance.download()
+        
+        if #available(iOS 10.0, *) {
+            FeedbackGenerator.shared.start()
+        }
         
         return true
     }
