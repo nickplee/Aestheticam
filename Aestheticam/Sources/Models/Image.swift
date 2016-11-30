@@ -11,5 +11,5 @@ import RealmSwift
 
 final class Image: Object {
     dynamic var url: String = ""
-    dynamic var data: NSData = NSData()
+    dynamic var data: Data = Data()
 }

@@ -14,7 +14,7 @@ struct Analytics {
     
     private static var configured = false
     
-    private static func safe(closure: Void -> Void) {
+    private static func safe(_ closure: @escaping (Void) -> Void) {
         do {
             try trap(closure)
         }
@@ -28,17 +28,17 @@ struct Analytics {
         }
     }
     
-    static func logEvent(name: String, _ parameters: [String : NSObject]? = nil) {
+    static func logEvent(_ name: String, _ parameters: [String : NSObject]? = nil) {
         guard configured else {
             return
         }
         safe {
-            FIRAnalytics.logEventWithName(name, parameters: parameters)
+            FIRAnalytics.logEvent(withName: name, parameters: parameters)
         }
     }
     
 }
 
-func LogEvent(name: String, _ parameters: [String : NSObject]? = nil) {
+func LogEvent(_ name: String, _ parameters: [String : NSObject]? = nil) {
     Analytics.logEvent(name, parameters)
 }

@@ -27,14 +27,14 @@ final class ReviewViewController: BaseController {
         imageView.image = image
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         becomeFirstResponder()
         Synthesizer.sharedInstance.playAesthetic()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let dest = segue.destinationViewController as? ProcessViewController where segue.identifier == "process" {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? ProcessViewController, segue.identifier == "process" {
             dest.image = originalImage
             image = nil
         }
@@ -42,20 +42,20 @@ final class ReviewViewController: BaseController {
     
     // MARK: Shaking
     
-    override func canBecomeFirstResponder() -> Bool {
+    override var canBecomeFirstResponder : Bool {
         return true
     }
     
-    override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        if motion == .MotionShake {
-            performSegueWithIdentifier("process", sender: self)
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            performSegue(withIdentifier: "process", sender: self)
             LogEvent("shake_reprocess")
         }
     }
     
     // MARK: Actions
     
-    @IBAction private func share(sender: AnyObject?) {
+    @IBAction private func share(_ sender: AnyObject?) {
         guard let img = image else {
             return
         }
@@ -71,18 +71,18 @@ final class ReviewViewController: BaseController {
             }
             
             var params: [String : NSObject] = [
-                "success" : success
+                "success" : success as NSObject
             ]
             
             if let a = activity {
-                params["activity"] = a
+                params["activity"] = a as NSObject?
             }
             
             LogEvent("share", params)
             
         }
         
-        presentViewController(controller, animated: true) {
+        present(controller, animated: true) {
             LogEvent("began_share")
         }
     }

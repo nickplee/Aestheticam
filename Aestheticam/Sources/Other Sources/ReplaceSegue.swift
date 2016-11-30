@@ -12,19 +12,19 @@ import UIKit
 final class ReplaceSegue: UIStoryboardSegue {
     
     override func perform() {
-        guard let nav = sourceViewController.navigationController else {
+        guard let nav = source.navigationController else {
             return
         }
         
-        let animated = UIView.areAnimationsEnabled()
+        let animated = UIView.areAnimationsEnabled
         
         var controllers = nav.viewControllers
         
-        if let idx = controllers.indexOf(sourceViewController) {
-            controllers[idx] = destinationViewController
+        if let idx = controllers.index(of: source) {
+            controllers[idx] = destination
         }
         else {
-            controllers.append(destinationViewController)
+            controllers.append(destination)
         }
         
         nav.setViewControllers(controllers, animated: animated)

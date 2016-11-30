@@ -6,18 +6,17 @@ target 'Aestheticam' do
 
     pod 'FastttCamera', '~> 0.3'
     pod 'PureLayout', '~> 3.0'
-    pod 'RandomKit', '~> 1.6'
-    pod 'Alamofire', '~> 3.4'
+    pod 'RandomKit', '~> 2.3'
+    pod 'Alamofire', '~> 4.2'
     pod 'AlamofireImage'
-    pod 'RealmSwift', '~> 0.103'
-    pod 'UIImageSwiftExtensions', '~> 2.0'
+    pod 'RealmSwift', '~> 2.1'
+    pod 'UIImageSwiftExtensions', '~> 3.0'
     pod 'Vivid', '~> 0.8'
-    pod 'ADTransitionController', '~> 1.1'
+    pod 'ADTransitionController', :git => 'https://github.com/nickplee/ADTransitionController.git'
     pod 'AudioKit', '~> 3.1'
-    pod 'Obsidian-UI-iOS', '~> 1.0'
-    pod 'Then', '~> 1.0'
-    pod 'Firebase', '~> 3.2'
-    pod 'Try', '~> 1.0'
+    pod 'Then', '~> 2.1'
+    pod 'Firebase', '~> 3.10'
+    pod 'Try', '~> 2.0'
 
 end
 

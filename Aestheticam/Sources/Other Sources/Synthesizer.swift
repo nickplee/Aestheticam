@@ -9,25 +9,25 @@
 import Foundation
 import AudioKit
 import RandomKit
-import Obsidian_UI_iOS
 import Then
 
 final class Synthesizer {
     
     static let sharedInstance = Synthesizer()
     
+    private static let noteRange = 24...84
+    
     private let mixer = AKMixer().then {
         $0.volume = 0.7
     }
     
-    private let osc = AKFMSynth(voiceCount: 10).then {
+    private let osc = AKFMOscillatorBank().then {
         $0.releaseDuration = 0.1
-        
     }
     
     private var players: [AKAudioPlayer] = []
     
-    private let aesthetic = (try! AVAudioPlayer(contentsOfURL: NSBundle.mainBundle().URLForResource("push", withExtension: "aiff")!)).then {
+    private let aesthetic = (try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "push", withExtension: "aiff")!)).then {
         $0.volume = 0.1
     }
     
@@ -37,21 +37,29 @@ final class Synthesizer {
         
         mixer.connect(osc)
         
-        players += (1...4).map { i in
+        players += (1...4).flatMap { i in
             let name = "snd\(i)"
-            let path = NSBundle.mainBundle().pathForResource(name, ofType: "aiff")!
-            let player = AKAudioPlayer(path)
-            mixer.connect(player)
-            return player
+            guard let url = Bundle.main.url(forResource: name, withExtension: "aiff") else {
+                return nil
+            }
+            do {
+                let file = try AKAudioFile(forReading: url)
+                let player = try AKAudioPlayer(file: file)
+                mixer.connect(player)
+                return player
+            }
+            catch {
+                return nil
+            }
         }
         
         AudioKit.start()
     }
     
-    func play(includeSounds: Bool = false) {
-        dispatch_async(dispatch_get_main_queue()) {
+    func play(_ includeSounds: Bool = false) {
+        DispatchQueue.main.async {
             if !includeSounds || Bool.random() {
-                self.osc.playNote(Int.random(24...84), velocity: 127)
+                self.osc.play(noteNumber: Int.random(within: Synthesizer.noteRange), velocity: 127)
             }
             else {
                 self.players.random?.play()
@@ -60,29 +68,29 @@ final class Synthesizer {
     }
     
     func playAesthetic() {
-        MainQueue.async {
+        DispatchQueue.main.async {
             self.aesthetic.stop()
             self.aesthetic.currentTime = 0
             self.aesthetic.play()
         }
     }
     
-    func stop(includeSounds: Bool = false) {
-        MainQueue.async {
-            
+    func stop(_ includeSounds: Bool = false) {
+        DispatchQueue.main.async {
             if includeSounds {
                 for p in self.players {
                     if p.isPlaying {
                         p.stop()
-                        p.reloadFile()
+                        do {
+                            try p.reloadFile()
+                        }
+                        catch {}
                     }
                 }
             }
-            
-            guard let n = self.osc.activeNotes.first else {
-                return
+            for i in Synthesizer.noteRange {
+                self.osc.stop(noteNumber: i)
             }
-            self.osc.stopNote(n)
         }
     }
     

@@ -10,10 +10,9 @@ import UIKit
 import ADTransitionController
 import AVFoundation
 import Then
-import Obsidian_UI_iOS
 import RandomKit
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: Properties
     
@@ -22,14 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Private Properties
     
     private let navDelegate = ADNavigationControllerDelegate()
-    private let player = (try! AVAudioPlayer(contentsOfURL: NSBundle.mainBundle().URLForResource("chill", withExtension: "mp3")!)).then {
+    
+    private let player = (try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "chill", withExtension: "mp3")!)).then {
         $0.numberOfLoops = -1
         $0.volume = 0.1
     }
     
     // MARK: Delegate Methods
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         Analytics.configure()
         
@@ -43,12 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         player.play()
     }
     
     
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         player.pause()
     }
     

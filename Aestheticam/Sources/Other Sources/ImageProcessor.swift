@@ -35,11 +35,11 @@ private struct Color {
         var rF: CGFloat = 0
         var aF: CGFloat = 0
         color.getRed(&rF, green: &gF, blue: &bF, alpha: &aF)
-        let mult: CGFloat -> UInt8 = { UInt8(CGFloat($0) * 255.0) }
+        let mult: (CGFloat) -> UInt8 = { UInt8(CGFloat($0) * 255.0) }
         self.init(r: mult(rF), g: mult(gF), b: mult(bF), a: mult(aF))
     }
     
-    mutating func tint(color: Color) {
+    mutating func tint(_ color: Color) {
         let tnt: (UInt8, UInt8) -> UInt8 = {
             let tintFactor = CGFloat($0.1) / 255.0
             let result = CGFloat($0.0) + CGFloat(255 - $0.0) * tintFactor
@@ -67,43 +67,43 @@ private struct ContextInfo {
 
 enum Effect {
     
-    case Sprinkle
-    case Copy
-    case CopyTint
-    case PlaceImage
-    case FaceMash
-    case Starfield
+    case sprinkle
+    case copy
+    case copyTint
+    case placeImage
+    case faceMash
+    case starfield
     
-    private func randomRegion(start: Int? = nil, length: Int? = nil, info: ContextInfo) -> Range<UnsafeMutableBufferPointer<Color>.Index> {
-        let len = length ?? (Int.random() % (info.data.count / 2))
-        let y = Int.random() % (info.height / 2)
-        let x = Int.random() % (info.width / 2)
+    private func randomRegion(_ start: Int? = nil, length: Int? = nil, info: ContextInfo) -> Range<UnsafeMutableBufferPointer<Color>.Index> {
+        let len = length ?? (Int.positiveRandom() % (info.data.count / 2))
+        let y = Int.positiveRandom() % (info.height / 2)
+        let x = Int.positiveRandom() % (info.width / 2)
         let s = start ?? (y * info.colorsPerRow) + x
         let end = min(s + len, info.data.count)
         return s..<end
     }
     
-    private func sprinkle(info: ContextInfo) {
-        let i = Int.random(0...(info.data.count - 1))
+    private func applySprinkle(_ info: ContextInfo) {
+        let i = Int.random(within: 0...(info.data.count - 1))
         var c = info.data[i]
-        c.r = Bool.random() ? UInt8(Int.random(0...255)) : c.r
-        c.g = Bool.random() ? UInt8(Int.random(0...255)) : c.g
-        c.b = Bool.random() ? UInt8(Int.random(0...255)) : c.b
+        c.r = Bool.random() ? UInt8(Int.random(within: 0...255)) : c.r
+        c.g = Bool.random() ? UInt8(Int.random(within: 0...255)) : c.g
+        c.b = Bool.random() ? UInt8(Int.random(within: 0...255)) : c.b
         info.data[i] = c
     }
     
-    private func copy(info: ContextInfo, tint: Bool = false) {
+    private func applyCopy(_ info: ContextInfo, tint: Bool = false) {
         
         let minHeight = 5 * info.colorsPerRow
-        let length = Int.random(minHeight ... (info.data.count / 2) - 1)
+        let length = Int.random(within: minHeight ... (info.data.count / 2) - 1)
         let range1 = randomRegion(length: length, info: info)
-        let range2 = randomRegion(range1.endIndex, length: length, info: info)
+        let range2 = randomRegion(range1.upperBound, length: length, info: info)
         
-        var src = range1.startIndex
+        var src = range1.lowerBound
         
         let tintColor = Color(color: UIColor.neonColors.random!)
         
-        for dest in range2 {
+        for dest in range2.lowerBound ..< range2.upperBound {
             var color = info.data[src]
             if tint {
                 color.tint(tintColor)
@@ -113,33 +113,33 @@ enum Effect {
         }
     }
     
-    private func placeImage(info: ContextInfo, image img: UIImage? = ImageDownloader.sharedInstance.getRandomImage()) -> CGRect? {
+    private func applyPlaceImage(_ info: ContextInfo, image img: UIImage? = ImageDownloader.sharedInstance.getRandomImage()) -> CGRect? {
        
         guard var image = img else {
             return nil
         }
         
-        let divisor = CGFloat.random(1.5 ... 3.0)
+        let divisor = CGFloat.random(within: 1.5 ... 3.0)
         
         let bounds = CGSize(width: CGFloat(info.width) / divisor, height: CGFloat(info.height) / divisor)
-        image = image.resizedImageWithContentMode(.ScaleAspectFit, bounds: bounds, interpolationQuality: .Default)
+        image = image.resizedImageWithContentMode(.scaleAspectFit, bounds: bounds, interpolationQuality: .default)
         
         let size = image.size
         
         UIGraphicsPushContext(info.context)
-        CGContextSaveGState(info.context)
-        CGContextTranslateCTM(info.context, 0, CGFloat(info.height));
-        CGContextScaleCTM(info.context, 1.0, -1.0);
+        info.context.saveGState()
+        info.context.translateBy(x: 0, y: CGFloat(info.height));
+        info.context.scaleBy(x: 1.0, y: -1.0);
         
         func genPoint() -> CGPoint {
-            return CGPoint(x: Int.random(0...(info.width - Int(size.width))), y: Int.random(0...(info.height - Int(size.height))))
+            return CGPoint(x: Int.random(within: 0...(info.width - Int(size.width))), y: Int.random(within: 0...(info.height - Int(size.height))))
         }
         
         var origin = genPoint()
         
         var tries = 0
         
-        while info.consumedRects.map({ CGRectContainsPoint($0, CGPoint(x: origin.x + (size.width / 2), y: origin.y + (size.height / 2))) }).reduce(false, combine: { $0 || $1 }) {
+        while info.consumedRects.map({ $0.contains(CGPoint(x: origin.x + (size.width / 2), y: origin.y + (size.height / 2))) }).reduce(false, { $0 || $1 }) {
             if tries > 25 {
                 break
             }
@@ -149,42 +149,45 @@ enum Effect {
         
         let rect = CGRect(origin: origin, size: size)
         
-        image.drawAtPoint(origin)
+        image.draw(at: origin)
         
-        CGContextRestoreGState(info.context);
+        info.context.restoreGState();
         UIGraphicsPopContext()
         
         return rect
     }
     
-    private func faceMash(info: ContextInfo) -> CGRect? {
+    private func applyFaceMash(_ info: ContextInfo) -> CGRect? {
+        
         let options = [
             CIDetectorAccuracy: CIDetectorAccuracyHigh
         ]
         let detector = CIDetector(ofType: CIDetectorTypeFace, context: info.coreImageContext, options: options)
-        let ciImage = CIImage(CGImage: info.original)
-        let features = detector.featuresInImage(ciImage).flatMap { $0 as? CIFaceFeature }
+        let ciImage = CIImage(cgImage: info.original)
         
-        guard let feature = features.shuffle().first else {
+        guard let features = detector?.features(in: ciImage).flatMap({ $0 as? CIFaceFeature }), let feature = features.shuffled().first else {
             return nil
         }
         
-        let pi2 = CGFloat.NativeType(M_PI_2)
+        let pi2 = CGFloat.pi / 2
+        let trans = CGAffineTransform(rotationAngle: CGFloat.random(within: -pi2...pi2))
+        let cropped = ciImage.cropping(to: feature.bounds).applying(trans)
         
-        let trans = CGAffineTransformMakeRotation(CGFloat.random(-pi2...pi2))
-        let cropped = ciImage.imageByCroppingToRect(feature.bounds).imageByApplyingTransform(trans)
-        let facePart = info.coreImageContext.createCGImage(cropped, fromRect: cropped.extent)
-        let ui = UIImage(CGImage: facePart)
+        guard let facePart = info.coreImageContext.createCGImage(cropped, from: cropped.extent) else {
+            return nil
+        }
         
-        return placeImage(info, image: ui)
+        let ui = UIImage(cgImage: facePart)
+        
+        return applyPlaceImage(info, image: ui)
     }
     
-    private func starField(info: ContextInfo) {
+    private func applyStarField(_ info: ContextInfo) {
         
         let gen = YUCIStarfieldGenerator()
         
-        let bounds = CGRect(origin: CGPointZero, size: CGSize(width: info.width, height: info.height))
-        gen.inputExtent = CIVector(CGRect: bounds)
+        let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: info.width, height: info.height))
+        gen.inputExtent = CIVector(cgRect: bounds)
         
         let darken = CIFilter(name: "CIColorMatrix")
         
@@ -192,26 +195,32 @@ enum Effect {
         darken?.setValue(gen.outputImage, forKey: kCIInputImageKey)
         darken?.setValue(CIVector(x: 0, y: 0, z: 0, w: 0.25), forKey: "inputAVector")
         
-        guard var output = darken?.outputImage, let currentState = CGBitmapContextCreateImage(info.context) else {
+        guard var output = darken?.outputImage, let currentState = info.context.makeImage() else {
             return
         }
         
-        let currentCIImage = CIImage(CGImage: currentState)
+        let currentCIImage = CIImage(cgImage: currentState)
         
         output = CIFilter(name: "CIScreenBlendMode", withInputParameters: [kCIInputImageKey: output, kCIInputBackgroundImageKey: currentCIImage])?.outputImage ?? output
         
-        let cgOutput = info.coreImageContext.createCGImage(output, fromRect: output.extent)
-        CGContextDrawImage(info.context, bounds, cgOutput)
+        let cgOutput = info.coreImageContext.createCGImage(output, from: output.extent)
+        info.context.draw(cgOutput!, in: bounds)
     }
     
-    private func apply(context: CGContext, original: CGImage, coreImageContext: CIContext, consumedRects: [CGRect]) -> CGRect? {
+    fileprivate func apply(_ context: CGContext, original: CGImage, coreImageContext: CIContext, consumedRects: [CGRect]) -> CGRect? {
         
-        let w = CGBitmapContextGetWidth(context)
-        let h = CGBitmapContextGetHeight(context)
-        let bpr = CGBitmapContextGetBytesPerRow(context)
-        let d = CGBitmapContextGetData(context)
-        let p = CGBitmapContextGetBitsPerPixel(context) / 8
+        let w = context.width
+        let h = context.height
+        let bpr = context.bytesPerRow
+        let d = context.data
+        let p = context.bitsPerPixel / 8
         let cpr = (bpr / p)
+        
+        let colorCount = cpr * h
+        
+        guard let startingAddress = d?.bindMemory(to: Color.self, capacity: colorCount) else {
+            return nil
+        }
         
         let info = ContextInfo(
             original: original,
@@ -220,7 +229,7 @@ enum Effect {
             width: w,
             height: h,
             bytesPerRow: bpr,
-            data: UnsafeMutableBufferPointer<Color>(start: UnsafeMutablePointer<Color>(d), count: cpr * h),
+            data: UnsafeMutableBufferPointer<Color>(start: startingAddress, count: colorCount),
             colorsPerRow: cpr,
             consumedRects: consumedRects
         )
@@ -228,18 +237,18 @@ enum Effect {
         var rect: CGRect?
         
         switch self {
-        case .Sprinkle:
-            sprinkle(info)
-        case .Copy:
-            copy(info)
-        case .CopyTint:
-            copy(info, tint: true)
-        case .PlaceImage:
-            rect = placeImage(info)
-        case .FaceMash:
-            rect = faceMash(info)
-        case .Starfield:
-            starField(info)
+        case .sprinkle:
+            applySprinkle(info)
+        case .copy:
+            applyCopy(info)
+        case .copyTint:
+            applyCopy(info, tint: true)
+        case .placeImage:
+            rect = applyPlaceImage(info)
+        case .faceMash:
+            rect = applyFaceMash(info)
+        case .starfield:
+            applyStarField(info)
         }
         
         return rect
@@ -256,46 +265,46 @@ final class ImageProcessor {
     private var consumedRects: [CGRect] = []
     
     convenience init(image: UIImage) {
-        self.init(image: image.CGImage)
+        self.init(image: image.cgImage)
     }
     
     init(image: CGImage!) {
         
         originalImage = image
         
-        let ctx = CGBitmapContextCreate(
-            nil,
-            CGImageGetWidth(image),
-            CGImageGetHeight(image),
-            CGImageGetBitsPerComponent(image),
-            CGImageGetBytesPerRow(image),
-            CGImageGetColorSpace(image) ?? CGColorSpaceCreateDeviceRGB(),
-            CGImageGetBitmapInfo(image).rawValue
+        let ctx = CGContext(
+            data: nil,
+            width: image.width,
+            height: image.height,
+            bitsPerComponent: image.bitsPerComponent,
+            bytesPerRow: image.bytesPerRow,
+            space: image.colorSpace ?? CGColorSpaceCreateDeviceRGB(),
+            bitmapInfo: image.bitmapInfo.rawValue
         )
         
         guard ctx != nil else {
             fatalError("ya done goofed")
         }
         
-        let rect = CGRect(x: 0, y: 0, width: CGImageGetWidth(image), height: CGImageGetHeight(image))
+        let rect = CGRect(x: 0, y: 0, width: image.width, height: image.height)
         
-        CGContextDrawImage(ctx, rect, image)
+        ctx?.draw(image, in: rect)
         
         context = ctx!
         
     }
     
-    func apply(effect: Effect) {
+    func apply(_ effect: Effect) {
         if let rect = effect.apply(context, original: originalImage, coreImageContext: coreImageContext, consumedRects: consumedRects) {
             consumedRects.append(rect)
         }
     }
     
     var outputImage: UIImage? {
-        guard let image = CGBitmapContextCreateImage(context) else {
+        guard let image = context.makeImage() else {
             return UIImage()
         }
-        return UIImage(CGImage: image)
+        return UIImage(cgImage: image)
     }
     
 }

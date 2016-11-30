@@ -24,7 +24,7 @@ final class CameraViewController: BaseController {
     // MARK: Private Properties
     
     private let camera = FastttCamera()
-    private var image: UIImage?
+    fileprivate var image: UIImage?
     
     // MARK: Lifecycle
     
@@ -36,18 +36,18 @@ final class CameraViewController: BaseController {
         configureCamera()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 //        debugGenerator()
     }
 
     private func debugGenerator() {
         image = UIImage(named: "Hillary_Clinton_official_Secretary_of_State_portrait_crop")
-        performSegueWithIdentifier("process", sender: self)
+        performSegue(withIdentifier: "process", sender: self)
     }
     
     private func configureUI() {
-        captureButton.imageView?.contentMode = .ScaleToFill
+        captureButton.imageView?.contentMode = .scaleToFill
         captureButton.imageView?.layer.minificationFilter = kCAFilterNearest
         captureButton.imageView?.layer.magnificationFilter = kCAFilterNearest
     }
@@ -58,11 +58,11 @@ final class CameraViewController: BaseController {
         camera.cameraDevice = Globals.persistedCaptureDevice
         fastttAddChildViewController(camera, belowSubview: controls)
         camera.view.autoPinEdgesToSuperviewEdges()
-        camera.view.backgroundColor = UIColor.clearColor()
+        camera.view.backgroundColor = UIColor.clear
     }
  
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let dest = segue.destinationViewController as? ProcessViewController where segue.identifier == "process" {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? ProcessViewController, segue.identifier == "process" {
             dest.image = image
             image = nil
         }
@@ -70,15 +70,15 @@ final class CameraViewController: BaseController {
     
     // MARK: Actions
  
-    @IBAction private func toggleCamera(sender: AnyObject?) {
+    @IBAction private func toggleCamera(_ sender: AnyObject?) {
         
         var newDevice = camera.cameraDevice
         
-        if camera.cameraDevice == .Front {
-            newDevice = .Rear
+        if camera.cameraDevice == .front {
+            newDevice = .rear
         }
         else {
-            newDevice = .Front
+            newDevice = .front
         }
         
         guard FastttCamera.isCameraDeviceAvailable(newDevice) else {
@@ -88,12 +88,12 @@ final class CameraViewController: BaseController {
         camera.cameraDevice = newDevice
         Globals.persistedCaptureDevice = newDevice
         
-        LogEvent("toggle_camera", ["camera" : newDevice.rawValue])
+        LogEvent("toggle_camera", ["camera" : newDevice.rawValue as NSNumber])
         
     }
     
-    @IBAction private func takePhoto(sender: AnyObject?) {
-        camera.view.hidden = true
+    @IBAction private func takePhoto(_ sender: AnyObject?) {
+        camera.view.isHidden = true
         camera.takePicture()
         LogEvent("take_photo")
     }
@@ -102,12 +102,14 @@ final class CameraViewController: BaseController {
 
 // MARK: FastttCameraDelegate
 extension CameraViewController: FastttCameraDelegate {
-    func cameraController(cameraController: FastttCameraInterface!, didFinishNormalizingCapturedImage capturedImage: FastttCapturedImage!) {
-        let scaledImage = capturedImage.scaledImage
+    func cameraController(_ cameraController: FastttCameraInterface!, didFinishNormalizing capturedImage: FastttCapturedImage!) {
+        guard let scaledImage = capturedImage.scaledImage else {
+            return
+        }
         image = scaledImage
-        dispatch_async(dispatch_get_main_queue()) {
-            LogEvent("image_size", ["size": String(scaledImage.size)])
-            self.performSegueWithIdentifier("process", sender: self)
+        DispatchQueue.main.async {
+            LogEvent("image_size", ["size": String(describing: scaledImage.size) as NSString])
+            self.performSegue(withIdentifier: "process", sender: self)
         }
     }
 }
