@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import RandomKit
 import PureLayout
 import AudioToolbox
 
@@ -133,7 +132,7 @@ final class ProcessViewController: BaseController {
             p.apply(.starfield)
         }
         
-        for _ in 0 ..< Int.random(within: 0...1000) {
+        for _ in 0 ..< Int.random(within: 0 ... 1000) {
             enqueue {
                 p.apply(.sprinkle)
             }
@@ -151,7 +150,7 @@ final class ProcessViewController: BaseController {
             }
         }
         
-        for _ in 0 ..< Int.random(within: 1 ... 3) {
+        for _ in 0 ..< Int.random(within: 2 ... 5) {
             enqueue(true) {
                 p.apply(.placeImage)
             }
@@ -167,7 +166,7 @@ final class ProcessViewController: BaseController {
         
         self.imageView.transform = CGAffineTransform(scaleX: 1.0 + percent, y: 1.0 + percent)
         
-        colorView.backgroundColor = UIColor.neonColors.random
+        colorView.backgroundColor = UIColor.neonColors.randomElement()
         
         DispatchQueue.global(qos: .background).async {
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
@@ -179,7 +178,7 @@ final class ProcessViewController: BaseController {
             let imageView = UIImageView(image: image)
             imageView.alpha = CGFloat.random(within: 0.25...0.75)
             imageView.frame = CGRect(origin: CGPoint.zero, size: size)
-            imageView.center = CGPoint.random(within: 0.0...CGFloat(view.frame.width), 0.0...CGFloat(view.frame.height))
+            imageView.center = CGPoint(x: CGFloat.random(within: 0.0...view.frame.width), y: CGFloat.random(within: 0.0...view.frame.height))
             view.addSubview(imageView)
             lastImageTime = Date()
         }

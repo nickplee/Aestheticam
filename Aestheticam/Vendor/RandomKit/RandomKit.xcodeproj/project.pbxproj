@@ -1,0 +1,2251 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		520396751E9AFD8F0041FAA3 /* ChaCha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520396741E9AFD8F0041FAA3 /* ChaCha.swift */; };
+		520396761E9AFD8F0041FAA3 /* ChaCha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520396741E9AFD8F0041FAA3 /* ChaCha.swift */; };
+		520396771E9AFD8F0041FAA3 /* ChaCha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520396741E9AFD8F0041FAA3 /* ChaCha.swift */; };
+		520396781E9AFD8F0041FAA3 /* ChaCha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520396741E9AFD8F0041FAA3 /* ChaCha.swift */; };
+		522268EC1E4163EC00C8865A /* XorshiftStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522268EB1E4163EC00C8865A /* XorshiftStar.swift */; };
+		522268ED1E4163EC00C8865A /* XorshiftStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522268EB1E4163EC00C8865A /* XorshiftStar.swift */; };
+		522268EE1E4163EC00C8865A /* XorshiftStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522268EB1E4163EC00C8865A /* XorshiftStar.swift */; };
+		522268EF1E4163EC00C8865A /* XorshiftStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522268EB1E4163EC00C8865A /* XorshiftStar.swift */; };
+		522523611F329CA8007274AC /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522523601F329CA8007274AC /* Tester.swift */; };
+		522523621F329CA8007274AC /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522523601F329CA8007274AC /* Tester.swift */; };
+		522523631F329CA8007274AC /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522523601F329CA8007274AC /* Tester.swift */; };
+		524300A31EFC61D000333F46 /* Threadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243009A1EFC61B600333F46 /* Threadly.framework */; };
+		524300AA1EFC61F800333F46 /* Threadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243009C1EFC61B600333F46 /* Threadly.framework */; };
+		524300AF1EFC620900333F46 /* Threadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243009E1EFC61B600333F46 /* Threadly.framework */; };
+		524300B41EFC622500333F46 /* Threadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524300A01EFC61B600333F46 /* Threadly.framework */; };
+		5247B99D1E890BB200C6B60E /* RandomRetrievable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247B99C1E890BB200C6B60E /* RandomRetrievable.swift */; };
+		5247B99E1E890BB200C6B60E /* RandomRetrievable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247B99C1E890BB200C6B60E /* RandomRetrievable.swift */; };
+		5247B99F1E890BB200C6B60E /* RandomRetrievable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247B99C1E890BB200C6B60E /* RandomRetrievable.swift */; };
+		5247B9A01E890BB200C6B60E /* RandomRetrievable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247B99C1E890BB200C6B60E /* RandomRetrievable.swift */; };
+		52485F671E3FEE11007C53AC /* StackArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52485F661E3FEE11007C53AC /* StackArray.swift */; };
+		52485F681E3FEE11007C53AC /* StackArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52485F661E3FEE11007C53AC /* StackArray.swift */; };
+		52485F691E3FEE11007C53AC /* StackArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52485F661E3FEE11007C53AC /* StackArray.swift */; };
+		52485F6A1E3FEE11007C53AC /* StackArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52485F661E3FEE11007C53AC /* StackArray.swift */; };
+		524F1DFD1E312D5E00BDE35F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2BF1DBD696B00E8B246 /* Random.swift */; };
+		524F1E021E312D5F00BDE35F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2BF1DBD696B00E8B246 /* Random.swift */; };
+		524F1E031E312D5F00BDE35F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2BF1DBD696B00E8B246 /* Random.swift */; };
+		524F1E041E312D6000BDE35F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2BF1DBD696B00E8B246 /* Random.swift */; };
+		524F1E051E312E0500BDE35F /* RandomWithMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB34F1DBDDF5700E8B246 /* RandomWithMax.swift */; };
+		524F1E061E312E0500BDE35F /* RandomWithMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB34F1DBDDF5700E8B246 /* RandomWithMax.swift */; };
+		524F1E071E312E0600BDE35F /* RandomWithMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB34F1DBDDF5700E8B246 /* RandomWithMax.swift */; };
+		524F1E081E312E0600BDE35F /* RandomWithMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB34F1DBDDF5700E8B246 /* RandomWithMax.swift */; };
+		524F1E091E312E1200BDE35F /* RandomWithMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3681DBE70CE00E8B246 /* RandomWithMin.swift */; };
+		524F1E0A1E312E1300BDE35F /* RandomWithMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3681DBE70CE00E8B246 /* RandomWithMin.swift */; };
+		524F1E0B1E312E1300BDE35F /* RandomWithMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3681DBE70CE00E8B246 /* RandomWithMin.swift */; };
+		524F1E0C1E312E1400BDE35F /* RandomWithMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3681DBE70CE00E8B246 /* RandomWithMin.swift */; };
+		524F1E0D1E312E2900BDE35F /* RandomToValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB35E1DBDE70A00E8B246 /* RandomToValue.swift */; };
+		524F1E0E1E312E2900BDE35F /* RandomToValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB35E1DBDE70A00E8B246 /* RandomToValue.swift */; };
+		524F1E0F1E312E2A00BDE35F /* RandomToValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB35E1DBDE70A00E8B246 /* RandomToValue.swift */; };
+		524F1E101E312E2A00BDE35F /* RandomToValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB35E1DBDE70A00E8B246 /* RandomToValue.swift */; };
+		524F1E111E312E6000BDE35F /* RandomThroughValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3631DBDE78300E8B246 /* RandomThroughValue.swift */; };
+		524F1E121E312E6100BDE35F /* RandomThroughValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3631DBDE78300E8B246 /* RandomThroughValue.swift */; };
+		524F1E131E312E6100BDE35F /* RandomThroughValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3631DBDE78300E8B246 /* RandomThroughValue.swift */; };
+		524F1E141E312E6100BDE35F /* RandomThroughValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3631DBDE78300E8B246 /* RandomThroughValue.swift */; };
+		524F1E151E312EC800BDE35F /* RandomInRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3381DBD7A2100E8B246 /* RandomInRange.swift */; };
+		524F1E161E312EC800BDE35F /* RandomInRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3381DBD7A2100E8B246 /* RandomInRange.swift */; };
+		524F1E171E312EC900BDE35F /* RandomInRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3381DBD7A2100E8B246 /* RandomInRange.swift */; };
+		524F1E181E312EC900BDE35F /* RandomInRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB3381DBD7A2100E8B246 /* RandomInRange.swift */; };
+		524F1E191E312F0A00BDE35F /* RandomInClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB33A1DBD829000E8B246 /* RandomInClosedRange.swift */; };
+		524F1E1A1E312F0B00BDE35F /* RandomInClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB33A1DBD829000E8B246 /* RandomInClosedRange.swift */; };
+		524F1E1B1E312F0B00BDE35F /* RandomInClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB33A1DBD829000E8B246 /* RandomInClosedRange.swift */; };
+		524F1E1C1E312F0B00BDE35F /* RandomInClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB33A1DBD829000E8B246 /* RandomInClosedRange.swift */; };
+		524F1E1D1E312F6000BDE35F /* RandomWithMaxWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE761DE54A98004CB28A /* RandomWithMaxWidth.swift */; };
+		524F1E1E1E312F6000BDE35F /* RandomWithMaxWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE761DE54A98004CB28A /* RandomWithMaxWidth.swift */; };
+		524F1E1F1E312F6100BDE35F /* RandomWithMaxWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE761DE54A98004CB28A /* RandomWithMaxWidth.swift */; };
+		524F1E201E312F6100BDE35F /* RandomWithMaxWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE761DE54A98004CB28A /* RandomWithMaxWidth.swift */; };
+		524F1E211E312F8100BDE35F /* RandomWithExactWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE7B1DE54BBF004CB28A /* RandomWithExactWidth.swift */; };
+		524F1E221E312F8100BDE35F /* RandomWithExactWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE7B1DE54BBF004CB28A /* RandomWithExactWidth.swift */; };
+		524F1E231E312F8200BDE35F /* RandomWithExactWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE7B1DE54BBF004CB28A /* RandomWithExactWidth.swift */; };
+		524F1E241E312F8200BDE35F /* RandomWithExactWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADBE7B1DE54BBF004CB28A /* RandomWithExactWidth.swift */; };
+		524F1E251E312FCE00BDE35F /* UniqueShuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217714E1DE6D5EF00DD4584 /* UniqueShuffleable.swift */; };
+		524F1E261E312FCF00BDE35F /* UniqueShuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217714E1DE6D5EF00DD4584 /* UniqueShuffleable.swift */; };
+		524F1E271E312FCF00BDE35F /* UniqueShuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217714E1DE6D5EF00DD4584 /* UniqueShuffleable.swift */; };
+		524F1E281E312FD000BDE35F /* UniqueShuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217714E1DE6D5EF00DD4584 /* UniqueShuffleable.swift */; };
+		524F1E291E312FD300BDE35F /* Shuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2C01DBD696B00E8B246 /* Shuffleable.swift */; };
+		524F1E2A1E312FD300BDE35F /* Shuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2C01DBD696B00E8B246 /* Shuffleable.swift */; };
+		524F1E2B1E312FD400BDE35F /* Shuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2C01DBD696B00E8B246 /* Shuffleable.swift */; };
+		524F1E2C1E312FD400BDE35F /* Shuffleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2C01DBD696B00E8B246 /* Shuffleable.swift */; };
+		524F1E2D1E31301600BDE35F /* RandomRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD11371DE2811C002EF43E /* RandomRawRepresentable.swift */; };
+		524F1E2E1E31301600BDE35F /* RandomRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD11371DE2811C002EF43E /* RandomRawRepresentable.swift */; };
+		524F1E2F1E31301700BDE35F /* RandomRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD11371DE2811C002EF43E /* RandomRawRepresentable.swift */; };
+		524F1E301E31301700BDE35F /* RandomRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD11371DE2811C002EF43E /* RandomRawRepresentable.swift */; };
+		524F1E311E31303F00BDE35F /* UnsafeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1341DDF16FD00F265CE /* UnsafeRandom.swift */; };
+		524F1E321E31303F00BDE35F /* UnsafeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1341DDF16FD00F265CE /* UnsafeRandom.swift */; };
+		524F1E331E31304000BDE35F /* UnsafeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1341DDF16FD00F265CE /* UnsafeRandom.swift */; };
+		524F1E341E31304100BDE35F /* UnsafeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1341DDF16FD00F265CE /* UnsafeRandom.swift */; };
+		524F1E391E31312800BDE35F /* Integer+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF51DBEBEED009B5E9D /* Integer+RandomKit.swift */; };
+		524F1E3A1E31312900BDE35F /* Integer+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF51DBEBEED009B5E9D /* Integer+RandomKit.swift */; };
+		524F1E3B1E31312900BDE35F /* Integer+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF51DBEBEED009B5E9D /* Integer+RandomKit.swift */; };
+		524F1E3C1E31312A00BDE35F /* Integer+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF51DBEBEED009B5E9D /* Integer+RandomKit.swift */; };
+		524F1E3D1E3132F800BDE35F /* RandomEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1391DDF5FA800F265CE /* RandomEnum.swift */; };
+		524F1E3E1E3132F900BDE35F /* RandomEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1391DDF5FA800F265CE /* RandomEnum.swift */; };
+		524F1E3F1E3132F900BDE35F /* RandomEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1391DDF5FA800F265CE /* RandomEnum.swift */; };
+		524F1E401E3132FA00BDE35F /* RandomEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA1391DDF5FA800F265CE /* RandomEnum.swift */; };
+		524F1E411E31335000BDE35F /* Collection+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF21DBEBEED009B5E9D /* Collection+RandomKit.swift */; };
+		524F1E421E31335100BDE35F /* Collection+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF21DBEBEED009B5E9D /* Collection+RandomKit.swift */; };
+		524F1E431E31335100BDE35F /* Collection+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF21DBEBEED009B5E9D /* Collection+RandomKit.swift */; };
+		524F1E441E31335200BDE35F /* Collection+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF21DBEBEED009B5E9D /* Collection+RandomKit.swift */; };
+		524F1E451E3134FA00BDE35F /* RandomWithAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D0481DDAFEB300B22F7F /* RandomWithAll.swift */; };
+		524F1E461E3134FB00BDE35F /* RandomWithAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D0481DDAFEB300B22F7F /* RandomWithAll.swift */; };
+		524F1E471E3134FB00BDE35F /* RandomWithAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D0481DDAFEB300B22F7F /* RandomWithAll.swift */; };
+		524F1E481E3134FC00BDE35F /* RandomWithAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D0481DDAFEB300B22F7F /* RandomWithAll.swift */; };
+		524F1E4A1E31352B00BDE35F /* Bool+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF01DBEBEED009B5E9D /* Bool+RandomKit.swift */; };
+		524F1E4B1E31352D00BDE35F /* Bool+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF01DBEBEED009B5E9D /* Bool+RandomKit.swift */; };
+		524F1E4C1E31352D00BDE35F /* Bool+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF01DBEBEED009B5E9D /* Bool+RandomKit.swift */; };
+		524F1E4D1E31352F00BDE35F /* Bool+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF01DBEBEED009B5E9D /* Bool+RandomKit.swift */; };
+		524F1E4E1E31356E00BDE35F /* UnicodeScalar+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF91DBEBEED009B5E9D /* UnicodeScalar+RandomKit.swift */; };
+		524F1E4F1E31356F00BDE35F /* UnicodeScalar+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF91DBEBEED009B5E9D /* UnicodeScalar+RandomKit.swift */; };
+		524F1E501E31357000BDE35F /* UnicodeScalar+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF91DBEBEED009B5E9D /* UnicodeScalar+RandomKit.swift */; };
+		524F1E511E31357000BDE35F /* UnicodeScalar+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF91DBEBEED009B5E9D /* UnicodeScalar+RandomKit.swift */; };
+		524F1E521E31360300BDE35F /* Character+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF11DBEBEED009B5E9D /* Character+RandomKit.swift */; };
+		524F1E531E31360400BDE35F /* Character+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF11DBEBEED009B5E9D /* Character+RandomKit.swift */; };
+		524F1E541E31360500BDE35F /* Character+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF11DBEBEED009B5E9D /* Character+RandomKit.swift */; };
+		524F1E551E31360600BDE35F /* Character+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF11DBEBEED009B5E9D /* Character+RandomKit.swift */; };
+		524F1E561E31364B00BDE35F /* Array+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DEF1DBEBEED009B5E9D /* Array+RandomKit.swift */; };
+		524F1E571E31364C00BDE35F /* Array+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DEF1DBEBEED009B5E9D /* Array+RandomKit.swift */; };
+		524F1E581E31364C00BDE35F /* Array+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DEF1DBEBEED009B5E9D /* Array+RandomKit.swift */; };
+		524F1E591E31364D00BDE35F /* Array+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DEF1DBEBEED009B5E9D /* Array+RandomKit.swift */; };
+		524F1E5A1E31370C00BDE35F /* FloatingPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF41DBEBEED009B5E9D /* FloatingPoint+RandomKit.swift */; };
+		524F1E5B1E31370D00BDE35F /* FloatingPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF41DBEBEED009B5E9D /* FloatingPoint+RandomKit.swift */; };
+		524F1E5C1E31370E00BDE35F /* FloatingPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF41DBEBEED009B5E9D /* FloatingPoint+RandomKit.swift */; };
+		524F1E5D1E31370E00BDE35F /* FloatingPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF41DBEBEED009B5E9D /* FloatingPoint+RandomKit.swift */; };
+		5268B1891F10551E00983C33 /* Trivial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268B1881F10551E00983C33 /* Trivial.swift */; };
+		5268B18A1F10551E00983C33 /* Trivial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268B1881F10551E00983C33 /* Trivial.swift */; };
+		5268B18B1F10551E00983C33 /* Trivial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268B1881F10551E00983C33 /* Trivial.swift */; };
+		5268B18C1F10551E00983C33 /* Trivial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268B1881F10551E00983C33 /* Trivial.swift */; };
+		528200F61BC9FA42001FDD58 /* RandomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528200911BC9C4A2001FDD58 /* RandomKit.framework */; };
+		528E480B1F0FD42100F610CD /* XoroshiroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E480A1F0FD42100F610CD /* XoroshiroTests.swift */; };
+		528E480C1F0FD42100F610CD /* XoroshiroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E480A1F0FD42100F610CD /* XoroshiroTests.swift */; };
+		528E480D1F0FD42100F610CD /* XoroshiroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E480A1F0FD42100F610CD /* XoroshiroTests.swift */; };
+		5290FC561E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290FC551E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift */; };
+		5290FC571E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290FC551E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift */; };
+		5290FC581E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290FC551E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift */; };
+		5290FC591E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290FC551E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift */; };
+		529F07521E8BA8180079AB0F /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F07511E8BA8180079AB0F /* ThreadLocal.swift */; };
+		529F07531E8BA8180079AB0F /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F07511E8BA8180079AB0F /* ThreadLocal.swift */; };
+		529F07541E8BA8180079AB0F /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F07511E8BA8180079AB0F /* ThreadLocal.swift */; };
+		529F07551E8BA8180079AB0F /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F07511E8BA8180079AB0F /* ThreadLocal.swift */; };
+		52A6B1321E329045001533D3 /* Set+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1311E329045001533D3 /* Set+RandomKit.swift */; };
+		52A6B1331E329045001533D3 /* Set+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1311E329045001533D3 /* Set+RandomKit.swift */; };
+		52A6B1341E329045001533D3 /* Set+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1311E329045001533D3 /* Set+RandomKit.swift */; };
+		52A6B1351E329045001533D3 /* Set+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1311E329045001533D3 /* Set+RandomKit.swift */; };
+		52A6B1591E37B9A6001533D3 /* Typecasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1581E37B9A6001533D3 /* Typecasting.swift */; };
+		52A6B15A1E37B9A6001533D3 /* Typecasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1581E37B9A6001533D3 /* Typecasting.swift */; };
+		52A6B15B1E37B9A6001533D3 /* Typecasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1581E37B9A6001533D3 /* Typecasting.swift */; };
+		52A6B15C1E37B9A6001533D3 /* Typecasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B1581E37B9A6001533D3 /* Typecasting.swift */; };
+		52ADBEE91DE55D13004CB28A /* ShiftOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ADBEE21DE55CEA004CB28A /* ShiftOperations.framework */; };
+		52ADBEEA1DE55D18004CB28A /* ShiftOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ADBEE41DE55CEA004CB28A /* ShiftOperations.framework */; };
+		52ADBEEB1DE55D1E004CB28A /* ShiftOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ADBEE61DE55CEA004CB28A /* ShiftOperations.framework */; };
+		52ADBEEC1DE55D24004CB28A /* ShiftOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ADBEE81DE55CEA004CB28A /* ShiftOperations.framework */; };
+		52B64AC51E8857AF000BBDDA /* RandomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5282009F1BC9C4B6001FDD58 /* RandomKit.framework */; };
+		52B64AD41E8857D0000BBDDA /* RandomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C96A1F1BD9828F00C3CBE0 /* RandomKit.framework */; };
+		52B64ADA1E885842000BBDDA /* ConstantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD45631E6E56D700E2C9A1 /* ConstantTests.swift */; };
+		52B64ADB1E885843000BBDDA /* ConstantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD45631E6E56D700E2C9A1 /* ConstantTests.swift */; };
+		52BD45681E6E572700E2C9A1 /* ConstantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD45631E6E56D700E2C9A1 /* ConstantTests.swift */; };
+		52CA18191E623DF6004C18FA /* RandomTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA18181E623DF6004C18FA /* RandomTuple.swift */; };
+		52CA181A1E623DF6004C18FA /* RandomTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA18181E623DF6004C18FA /* RandomTuple.swift */; };
+		52CA181B1E623DF6004C18FA /* RandomTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA18181E623DF6004C18FA /* RandomTuple.swift */; };
+		52CA181C1E623DF6004C18FA /* RandomTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA18181E623DF6004C18FA /* RandomTuple.swift */; };
+		52CA181F1E63A818004C18FA /* NSArray+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA181E1E63A818004C18FA /* NSArray+RandomKit.swift */; };
+		52CA18201E63A818004C18FA /* NSArray+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA181E1E63A818004C18FA /* NSArray+RandomKit.swift */; };
+		52CA18211E63A818004C18FA /* NSArray+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA181E1E63A818004C18FA /* NSArray+RandomKit.swift */; };
+		52CA18221E63A818004C18FA /* NSArray+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA181E1E63A818004C18FA /* NSArray+RandomKit.swift */; };
+		52CE98D11E4052ED00DA001B /* Xorshift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE98D01E4052ED00DA001B /* Xorshift.swift */; };
+		52CE98D21E4052ED00DA001B /* Xorshift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE98D01E4052ED00DA001B /* Xorshift.swift */; };
+		52CE98D31E4052ED00DA001B /* Xorshift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE98D01E4052ED00DA001B /* Xorshift.swift */; };
+		52CE98D41E4052ED00DA001B /* Xorshift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE98D01E4052ED00DA001B /* Xorshift.swift */; };
+		52D47D311E313F010050588E /* Dictionary+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF31DBEBEED009B5E9D /* Dictionary+RandomKit.swift */; };
+		52D47D361E313F010050588E /* Dictionary+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF31DBEBEED009B5E9D /* Dictionary+RandomKit.swift */; };
+		52D47D371E313F020050588E /* Dictionary+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF31DBEBEED009B5E9D /* Dictionary+RandomKit.swift */; };
+		52D47D381E313F030050588E /* Dictionary+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF31DBEBEED009B5E9D /* Dictionary+RandomKit.swift */; };
+		52D47D391E313FCD0050588E /* Range+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230293B1DC54137007530CD /* Range+RandomKit.swift */; };
+		52D47D3A1E313FCD0050588E /* Range+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230293B1DC54137007530CD /* Range+RandomKit.swift */; };
+		52D47D3B1E313FCE0050588E /* Range+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230293B1DC54137007530CD /* Range+RandomKit.swift */; };
+		52D47D3C1E313FCF0050588E /* Range+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230293B1DC54137007530CD /* Range+RandomKit.swift */; };
+		52D47D411E315D840050588E /* Strideable+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A248B41DC68200004C9991 /* Strideable+RandomKit.swift */; };
+		52D47D421E315D850050588E /* Strideable+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A248B41DC68200004C9991 /* Strideable+RandomKit.swift */; };
+		52D47D431E315D860050588E /* Strideable+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A248B41DC68200004C9991 /* Strideable+RandomKit.swift */; };
+		52D47D441E315D870050588E /* Strideable+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A248B41DC68200004C9991 /* Strideable+RandomKit.swift */; };
+		52D47D451E315DC60050588E /* String+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF81DBEBEED009B5E9D /* String+RandomKit.swift */; };
+		52D47D461E315DC60050588E /* String+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF81DBEBEED009B5E9D /* String+RandomKit.swift */; };
+		52D47D471E315DC70050588E /* String+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF81DBEBEED009B5E9D /* String+RandomKit.swift */; };
+		52D47D481E315DC70050588E /* String+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737DF81DBEBEED009B5E9D /* String+RandomKit.swift */; };
+		52D47D491E315F7D0050588E /* Color+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E281DBEBEF8009B5E9D /* Color+RandomKit.swift */; };
+		52D47D4A1E315F7E0050588E /* Color+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E281DBEBEF8009B5E9D /* Color+RandomKit.swift */; };
+		52D47D4B1E315F7E0050588E /* Color+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E281DBEBEF8009B5E9D /* Color+RandomKit.swift */; };
+		52D47D4C1E315F7F0050588E /* Color+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E281DBEBEF8009B5E9D /* Color+RandomKit.swift */; };
+		52D47D4D1E315FCD0050588E /* CGFloat+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0C1DBEADD1006FF58C /* CGFloat+RandomKit.swift */; };
+		52D47D4E1E315FCE0050588E /* CGFloat+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0C1DBEADD1006FF58C /* CGFloat+RandomKit.swift */; };
+		52D47D4F1E315FCF0050588E /* CGFloat+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0C1DBEADD1006FF58C /* CGFloat+RandomKit.swift */; };
+		52D47D501E315FCF0050588E /* CGFloat+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0C1DBEADD1006FF58C /* CGFloat+RandomKit.swift */; };
+		52D47D511E3160070050588E /* CGPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0D1DBEADD1006FF58C /* CGPoint+RandomKit.swift */; };
+		52D47D521E3160080050588E /* CGPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0D1DBEADD1006FF58C /* CGPoint+RandomKit.swift */; };
+		52D47D531E3160080050588E /* CGPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0D1DBEADD1006FF58C /* CGPoint+RandomKit.swift */; };
+		52D47D541E3160090050588E /* CGPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0D1DBEADD1006FF58C /* CGPoint+RandomKit.swift */; };
+		52D47D551E3160190050588E /* CGRect+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0E1DBEADD1006FF58C /* CGRect+RandomKit.swift */; };
+		52D47D561E3160190050588E /* CGRect+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0E1DBEADD1006FF58C /* CGRect+RandomKit.swift */; };
+		52D47D571E31601A0050588E /* CGRect+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0E1DBEADD1006FF58C /* CGRect+RandomKit.swift */; };
+		52D47D581E31601A0050588E /* CGRect+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0E1DBEADD1006FF58C /* CGRect+RandomKit.swift */; };
+		52D47D591E31607C0050588E /* CGSize+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0F1DBEADD1006FF58C /* CGSize+RandomKit.swift */; };
+		52D47D5A1E31607D0050588E /* CGSize+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0F1DBEADD1006FF58C /* CGSize+RandomKit.swift */; };
+		52D47D5B1E31607D0050588E /* CGSize+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0F1DBEADD1006FF58C /* CGSize+RandomKit.swift */; };
+		52D47D5C1E31607E0050588E /* CGSize+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B0F1DBEADD1006FF58C /* CGSize+RandomKit.swift */; };
+		52D47D5D1E3160A10050588E /* CGVector+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B101DBEADD1006FF58C /* CGVector+RandomKit.swift */; };
+		52D47D5E1E3160A10050588E /* CGVector+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B101DBEADD1006FF58C /* CGVector+RandomKit.swift */; };
+		52D47D5F1E3160A10050588E /* CGVector+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B101DBEADD1006FF58C /* CGVector+RandomKit.swift */; };
+		52D47D601E3160A20050588E /* CGVector+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D8B101DBEADD1006FF58C /* CGVector+RandomKit.swift */; };
+		52D47D611E3161060050588E /* Date+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E291DBEBEF8009B5E9D /* Date+RandomKit.swift */; };
+		52D47D621E3161070050588E /* Date+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E291DBEBEF8009B5E9D /* Date+RandomKit.swift */; };
+		52D47D631E3161070050588E /* Date+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E291DBEBEF8009B5E9D /* Date+RandomKit.swift */; };
+		52D47D641E3161080050588E /* Date+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E291DBEBEF8009B5E9D /* Date+RandomKit.swift */; };
+		52D47D651E3161870050588E /* Decimal+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E451DBEC9C6009B5E9D /* Decimal+RandomKit.swift */; };
+		52D47D661E3161870050588E /* Decimal+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E451DBEC9C6009B5E9D /* Decimal+RandomKit.swift */; };
+		52D47D671E3161880050588E /* Decimal+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E451DBEC9C6009B5E9D /* Decimal+RandomKit.swift */; };
+		52D47D681E3161890050588E /* Decimal+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E451DBEC9C6009B5E9D /* Decimal+RandomKit.swift */; };
+		52D47D691E3161E40050588E /* NSNumber+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E2A1DBEBEF8009B5E9D /* NSNumber+RandomKit.swift */; };
+		52D47D6A1E3161E50050588E /* NSNumber+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E2A1DBEBEF8009B5E9D /* NSNumber+RandomKit.swift */; };
+		52D47D6B1E3161E50050588E /* NSNumber+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E2A1DBEBEF8009B5E9D /* NSNumber+RandomKit.swift */; };
+		52D47D6C1E3161E60050588E /* NSNumber+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52737E2A1DBEBEF8009B5E9D /* NSNumber+RandomKit.swift */; };
+		52D47D731E3165360050588E /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D721E3165360050588E /* RandomGenerator.swift */; };
+		52D47D741E3165360050588E /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D721E3165360050588E /* RandomGenerator.swift */; };
+		52D47D751E3165360050588E /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D721E3165360050588E /* RandomGenerator.swift */; };
+		52D47D761E3165360050588E /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D721E3165360050588E /* RandomGenerator.swift */; };
+		52D47D781E31654B0050588E /* DeviceRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D771E31654B0050588E /* DeviceRandom.swift */; };
+		52D47D791E31654B0050588E /* DeviceRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D771E31654B0050588E /* DeviceRandom.swift */; };
+		52D47D7A1E31654B0050588E /* DeviceRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D771E31654B0050588E /* DeviceRandom.swift */; };
+		52D47D7B1E31654B0050588E /* DeviceRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D771E31654B0050588E /* DeviceRandom.swift */; };
+		52D47D7D1E3165C50050588E /* MersenneTwister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D7C1E3165C50050588E /* MersenneTwister.swift */; };
+		52D47D7E1E3165C50050588E /* MersenneTwister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D7C1E3165C50050588E /* MersenneTwister.swift */; };
+		52D47D7F1E3165C50050588E /* MersenneTwister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D7C1E3165C50050588E /* MersenneTwister.swift */; };
+		52D47D801E3165C50050588E /* MersenneTwister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D7C1E3165C50050588E /* MersenneTwister.swift */; };
+		52D47D821E316B9A0050588E /* RandomBytesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D811E316B9A0050588E /* RandomBytesGenerator.swift */; };
+		52D47D831E316B9A0050588E /* RandomBytesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D811E316B9A0050588E /* RandomBytesGenerator.swift */; };
+		52D47D841E316B9A0050588E /* RandomBytesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D811E316B9A0050588E /* RandomBytesGenerator.swift */; };
+		52D47D851E316B9A0050588E /* RandomBytesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D811E316B9A0050588E /* RandomBytesGenerator.swift */; };
+		52D47D871E317D6B0050588E /* Seedable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D861E317D6B0050588E /* Seedable.swift */; };
+		52D47D881E317D6B0050588E /* Seedable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D861E317D6B0050588E /* Seedable.swift */; };
+		52D47D891E317D6B0050588E /* Seedable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D861E317D6B0050588E /* Seedable.swift */; };
+		52D47D8A1E317D6B0050588E /* Seedable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D861E317D6B0050588E /* Seedable.swift */; };
+		52D47D8C1E3180B60050588E /* Xoroshiro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D8B1E3180B60050588E /* Xoroshiro.swift */; };
+		52D47D8D1E3180B60050588E /* Xoroshiro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D8B1E3180B60050588E /* Xoroshiro.swift */; };
+		52D47D8E1E3180B60050588E /* Xoroshiro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D8B1E3180B60050588E /* Xoroshiro.swift */; };
+		52D47D8F1E3180B60050588E /* Xoroshiro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D8B1E3180B60050588E /* Xoroshiro.swift */; };
+		52D47D911E3186EA0050588E /* ARC4Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D901E3186EA0050588E /* ARC4Random.swift */; };
+		52D47D921E3186EA0050588E /* ARC4Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D901E3186EA0050588E /* ARC4Random.swift */; };
+		52D47D931E3186EA0050588E /* ARC4Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D901E3186EA0050588E /* ARC4Random.swift */; };
+		52D47D941E3186EA0050588E /* ARC4Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D47D901E3186EA0050588E /* ARC4Random.swift */; };
+		52D5BF141E9E3E37006C1E60 /* ChaChaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5BF0F1E9E3E1A006C1E60 /* ChaChaTests.swift */; };
+		52D5BF151E9E3E38006C1E60 /* ChaChaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5BF0F1E9E3E1A006C1E60 /* ChaChaTests.swift */; };
+		52D5BF161E9E3E38006C1E60 /* ChaChaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5BF0F1E9E3E1A006C1E60 /* ChaChaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		524300991EFC61B600333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522AA4B61EFB1AFB003CFC76;
+			remoteInfo = "Threadly macOS";
+		};
+		5243009B1EFC61B600333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522AA4C41EFB1B20003CFC76;
+			remoteInfo = "Threadly iOS";
+		};
+		5243009D1EFC61B600333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522AA4D11EFB1B2C003CFC76;
+			remoteInfo = "Threadly watchOS";
+		};
+		5243009F1EFC61B600333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522AA4EB1EFB1B4E003CFC76;
+			remoteInfo = "Threadly tvOS";
+		};
+		524300A11EFC61CB00333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 522AA4B51EFB1AFB003CFC76;
+			remoteInfo = "Threadly macOS";
+		};
+		524300A61EFC61E800333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 52ADBE991DE5526A004CB28A;
+			remoteInfo = "ShiftOperations iOS";
+		};
+		524300A81EFC61ED00333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 522AA4C31EFB1B20003CFC76;
+			remoteInfo = "Threadly iOS";
+		};
+		524300AB1EFC61FE00333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 52ADBEA61DE55272004CB28A;
+			remoteInfo = "ShiftOperations watchOS";
+		};
+		524300AD1EFC620500333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 522AA4D01EFB1B2C003CFC76;
+			remoteInfo = "Threadly watchOS";
+		};
+		524300B01EFC621600333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 52ADBEB31DE55279004CB28A;
+			remoteInfo = "ShiftOperations tvOS";
+		};
+		524300B21EFC621C00333F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 522AA4EA1EFB1B4D003CFC76;
+			remoteInfo = "Threadly tvOS";
+		};
+		525FEEDA1EE67B5D0015254D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 52ADBE8B1DE55262004CB28A;
+			remoteInfo = "ShiftOperations macOS";
+		};
+		528200F71BC9FA42001FDD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528200861BC9C460001FDD58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 528200901BC9C4A2001FDD58;
+			remoteInfo = "RandomKit-OSX";
+		};
+		52ADBEE11DE55CEA004CB28A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52ADBE8C1DE55262004CB28A;
+			remoteInfo = "ShiftOperations macOS";
+		};
+		52ADBEE31DE55CEA004CB28A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52ADBE9A1DE5526A004CB28A;
+			remoteInfo = "ShiftOperations iOS";
+		};
+		52ADBEE51DE55CEA004CB28A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52ADBEA71DE55272004CB28A;
+			remoteInfo = "ShiftOperations watchOS";
+		};
+		52ADBEE71DE55CEA004CB28A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52ADBEB41DE55279004CB28A;
+			remoteInfo = "ShiftOperations tvOS";
+		};
+		52B64AC61E8857AF000BBDDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528200861BC9C460001FDD58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5282009E1BC9C4B6001FDD58;
+			remoteInfo = "RandomKit iOS";
+		};
+		52B64AD51E8857D0000BBDDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528200861BC9C460001FDD58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52C96A1E1BD9828F00C3CBE0;
+			remoteInfo = "RandomKit tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		520396741E9AFD8F0041FAA3 /* ChaCha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaCha.swift; sourceTree = "<group>"; };
+		520DA1341DDF16FD00F265CE /* UnsafeRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsafeRandom.swift; sourceTree = "<group>"; };
+		520DA1391DDF5FA800F265CE /* RandomEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomEnum.swift; sourceTree = "<group>"; };
+		5217714E1DE6D5EF00DD4584 /* UniqueShuffleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueShuffleable.swift; sourceTree = "<group>"; };
+		521771671DE6DF9C00DD4584 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		521771681DE6E4E900DD4584 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		5217716D1DE6F0D600DD4584 /* Benchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
+		5217716E1DE7024200DD4584 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5220D0481DDAFEB300B22F7F /* RandomWithAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWithAll.swift; sourceTree = "<group>"; };
+		522268EB1E4163EC00C8865A /* XorshiftStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XorshiftStar.swift; sourceTree = "<group>"; };
+		522523601F329CA8007274AC /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
+		5230293B1DC54137007530CD /* Range+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+RandomKit.swift"; sourceTree = "<group>"; };
+		523D8B0C1DBEADD1006FF58C /* CGFloat+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+RandomKit.swift"; sourceTree = "<group>"; };
+		523D8B0D1DBEADD1006FF58C /* CGPoint+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+RandomKit.swift"; sourceTree = "<group>"; };
+		523D8B0E1DBEADD1006FF58C /* CGRect+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+RandomKit.swift"; sourceTree = "<group>"; };
+		523D8B0F1DBEADD1006FF58C /* CGSize+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+RandomKit.swift"; sourceTree = "<group>"; };
+		523D8B101DBEADD1006FF58C /* CGVector+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+RandomKit.swift"; sourceTree = "<group>"; };
+		524083961CA5B31E00AB8851 /* RandomKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RandomKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		524083971CA5B35800AB8851 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		5243008F1EFC61B600333F46 /* Threadly.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Threadly.xcodeproj; path = Carthage/Checkouts/Threadly/Threadly.xcodeproj; sourceTree = "<group>"; };
+		5247B99C1E890BB200C6B60E /* RandomRetrievable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomRetrievable.swift; sourceTree = "<group>"; };
+		52485F661E3FEE11007C53AC /* StackArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackArray.swift; sourceTree = "<group>"; };
+		525EB2BD1DBD607F00E8B246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525EB2BF1DBD696B00E8B246 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		525EB2C01DBD696B00E8B246 /* Shuffleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuffleable.swift; sourceTree = "<group>"; };
+		525EB3381DBD7A2100E8B246 /* RandomInRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomInRange.swift; sourceTree = "<group>"; };
+		525EB33A1DBD829000E8B246 /* RandomInClosedRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomInClosedRange.swift; sourceTree = "<group>"; };
+		525EB34F1DBDDF5700E8B246 /* RandomWithMax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWithMax.swift; sourceTree = "<group>"; };
+		525EB35E1DBDE70A00E8B246 /* RandomToValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomToValue.swift; sourceTree = "<group>"; };
+		525EB3631DBDE78300E8B246 /* RandomThroughValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomThroughValue.swift; sourceTree = "<group>"; };
+		525EB3681DBE70CE00E8B246 /* RandomWithMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWithMin.swift; sourceTree = "<group>"; };
+		5268B1881F10551E00983C33 /* Trivial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trivial.swift; sourceTree = "<group>"; };
+		52737DEF1DBEBEED009B5E9D /* Array+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF01DBEBEED009B5E9D /* Bool+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF11DBEBEED009B5E9D /* Character+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF21DBEBEED009B5E9D /* Collection+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF31DBEBEED009B5E9D /* Dictionary+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF41DBEBEED009B5E9D /* FloatingPoint+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF51DBEBEED009B5E9D /* Integer+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integer+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF81DBEBEED009B5E9D /* String+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RandomKit.swift"; sourceTree = "<group>"; };
+		52737DF91DBEBEED009B5E9D /* UnicodeScalar+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnicodeScalar+RandomKit.swift"; sourceTree = "<group>"; };
+		52737E281DBEBEF8009B5E9D /* Color+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+RandomKit.swift"; sourceTree = "<group>"; };
+		52737E291DBEBEF8009B5E9D /* Date+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+RandomKit.swift"; sourceTree = "<group>"; };
+		52737E2A1DBEBEF8009B5E9D /* NSNumber+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+RandomKit.swift"; sourceTree = "<group>"; };
+		52737E451DBEC9C6009B5E9D /* Decimal+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decimal+RandomKit.swift"; sourceTree = "<group>"; };
+		528200911BC9C4A2001FDD58 /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5282009F1BC9C4B6001FDD58 /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		528200AC1BC9C4C0001FDD58 /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		528200F11BC9FA42001FDD58 /* RandomKit macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomKit macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		528200F51BC9FA42001FDD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52879EB61DE7BCDF004EF9FE /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		528E480A1F0FD42100F610CD /* XoroshiroTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XoroshiroTests.swift; sourceTree = "<group>"; };
+		5290FC551E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReseedingRandomGenerator.swift; sourceTree = "<group>"; };
+		529F07511E8BA8180079AB0F /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocal.swift; sourceTree = "<group>"; };
+		52A248B41DC68200004C9991 /* Strideable+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strideable+RandomKit.swift"; sourceTree = "<group>"; };
+		52A6B1311E329045001533D3 /* Set+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+RandomKit.swift"; sourceTree = "<group>"; };
+		52A6B1581E37B9A6001533D3 /* Typecasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typecasting.swift; sourceTree = "<group>"; };
+		52ADBE761DE54A98004CB28A /* RandomWithMaxWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWithMaxWidth.swift; sourceTree = "<group>"; };
+		52ADBE7B1DE54BBF004CB28A /* RandomWithExactWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWithExactWidth.swift; sourceTree = "<group>"; };
+		52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShiftOperations.xcodeproj; path = Carthage/Checkouts/ShiftOperations/ShiftOperations.xcodeproj; sourceTree = "<group>"; };
+		52B64AC01E8857AF000BBDDA /* RandomKit iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomKit iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B64ACF1E8857D0000BBDDA /* RandomKit tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomKit tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52BD455D1E6E56CE00E2C9A1 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		52BD45631E6E56D700E2C9A1 /* ConstantTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantTests.swift; sourceTree = "<group>"; };
+		52C96A1F1BD9828F00C3CBE0 /* RandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CA18181E623DF6004C18FA /* RandomTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTuple.swift; sourceTree = "<group>"; };
+		52CA181E1E63A818004C18FA /* NSArray+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+RandomKit.swift"; sourceTree = "<group>"; };
+		52CE98D01E4052ED00DA001B /* Xorshift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xorshift.swift; sourceTree = "<group>"; };
+		52D47D721E3165360050588E /* RandomGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		52D47D771E31654B0050588E /* DeviceRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceRandom.swift; sourceTree = "<group>"; };
+		52D47D7C1E3165C50050588E /* MersenneTwister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MersenneTwister.swift; sourceTree = "<group>"; };
+		52D47D811E316B9A0050588E /* RandomBytesGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBytesGenerator.swift; sourceTree = "<group>"; };
+		52D47D861E317D6B0050588E /* Seedable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seedable.swift; sourceTree = "<group>"; };
+		52D47D8B1E3180B60050588E /* Xoroshiro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xoroshiro.swift; sourceTree = "<group>"; };
+		52D47D901E3186EA0050588E /* ARC4Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARC4Random.swift; sourceTree = "<group>"; };
+		52D5BF0F1E9E3E1A006C1E60 /* ChaChaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaChaTests.swift; sourceTree = "<group>"; };
+		52F9E7601CA5BBBA00039162 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		52FD11371DE2811C002EF43E /* RandomRawRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomRawRepresentable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5282008D1BC9C4A2001FDD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524300A31EFC61D000333F46 /* Threadly.framework in Frameworks */,
+				52ADBEE91DE55D13004CB28A /* ShiftOperations.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5282009B1BC9C4B6001FDD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524300AA1EFC61F800333F46 /* Threadly.framework in Frameworks */,
+				52ADBEEA1DE55D18004CB28A /* ShiftOperations.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528200A81BC9C4C0001FDD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524300AF1EFC620900333F46 /* Threadly.framework in Frameworks */,
+				52ADBEEB1DE55D1E004CB28A /* ShiftOperations.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528200EE1BC9FA42001FDD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528200F61BC9FA42001FDD58 /* RandomKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B64ABD1E8857AF000BBDDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B64AC51E8857AF000BBDDA /* RandomKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B64ACC1E8857D0000BBDDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B64AD41E8857D0000BBDDA /* RandomKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C96A1B1BD9828F00C3CBE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524300B41EFC622500333F46 /* Threadly.framework in Frameworks */,
+				52ADBEEC1DE55D24004CB28A /* ShiftOperations.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		521771611DE6DF7600DD4584 /* RandomKit */ = {
+			isa = PBXGroup;
+			children = (
+				525EB2BE1DBD696B00E8B246 /* Types */,
+				52CA18171E623DEC004C18FA /* Functions */,
+				525EB2C91DBD697200E8B246 /* Extensions */,
+				52A6B1531E37B980001533D3 /* Internal */,
+			);
+			path = RandomKit;
+			sourceTree = "<group>";
+		};
+		521771661DE6DF9C00DD4584 /* benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				521771671DE6DF9C00DD4584 /* main.swift */,
+				52879EB61DE7BCDF004EF9FE /* Help.swift */,
+				5217716D1DE6F0D600DD4584 /* Benchmark.swift */,
+				521771681DE6E4E900DD4584 /* Style.swift */,
+				5217716E1DE7024200DD4584 /* Extensions.swift */,
+			);
+			path = benchmark;
+			sourceTree = "<group>";
+		};
+		523D8B0B1DBEADD1006FF58C /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				523D8B0C1DBEADD1006FF58C /* CGFloat+RandomKit.swift */,
+				523D8B0D1DBEADD1006FF58C /* CGPoint+RandomKit.swift */,
+				523D8B0E1DBEADD1006FF58C /* CGRect+RandomKit.swift */,
+				523D8B0F1DBEADD1006FF58C /* CGSize+RandomKit.swift */,
+				523D8B101DBEADD1006FF58C /* CGVector+RandomKit.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		524300901EFC61B600333F46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5243009A1EFC61B600333F46 /* Threadly.framework */,
+				5243009C1EFC61B600333F46 /* Threadly.framework */,
+				5243009E1EFC61B600333F46 /* Threadly.framework */,
+				524300A01EFC61B600333F46 /* Threadly.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		525EB2BC1DBD606F00E8B246 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				525EB2BD1DBD607F00E8B246 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		525EB2BE1DBD696B00E8B246 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				52D47D711E3165360050588E /* RandomGenerator */,
+				525EB2BF1DBD696B00E8B246 /* Random.swift */,
+				5220D0481DDAFEB300B22F7F /* RandomWithAll.swift */,
+				525EB34F1DBDDF5700E8B246 /* RandomWithMax.swift */,
+				525EB3681DBE70CE00E8B246 /* RandomWithMin.swift */,
+				525EB35E1DBDE70A00E8B246 /* RandomToValue.swift */,
+				525EB3631DBDE78300E8B246 /* RandomThroughValue.swift */,
+				525EB3381DBD7A2100E8B246 /* RandomInRange.swift */,
+				525EB33A1DBD829000E8B246 /* RandomInClosedRange.swift */,
+				52ADBE761DE54A98004CB28A /* RandomWithMaxWidth.swift */,
+				52ADBE7B1DE54BBF004CB28A /* RandomWithExactWidth.swift */,
+				5247B99C1E890BB200C6B60E /* RandomRetrievable.swift */,
+				525EB2C01DBD696B00E8B246 /* Shuffleable.swift */,
+				5217714E1DE6D5EF00DD4584 /* UniqueShuffleable.swift */,
+				52FD11371DE2811C002EF43E /* RandomRawRepresentable.swift */,
+				5268B1881F10551E00983C33 /* Trivial.swift */,
+				520DA1341DDF16FD00F265CE /* UnsafeRandom.swift */,
+				520DA1391DDF5FA800F265CE /* RandomEnum.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		525EB2C91DBD697200E8B246 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52737DEE1DBEBEED009B5E9D /* Swift */,
+				52737E261DBEBEF8009B5E9D /* Foundation */,
+				523D8B0B1DBEADD1006FF58C /* CoreGraphics */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52737DEE1DBEBEED009B5E9D /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				52737DEF1DBEBEED009B5E9D /* Array+RandomKit.swift */,
+				52737DF01DBEBEED009B5E9D /* Bool+RandomKit.swift */,
+				52737DF11DBEBEED009B5E9D /* Character+RandomKit.swift */,
+				52737DF21DBEBEED009B5E9D /* Collection+RandomKit.swift */,
+				52737DF31DBEBEED009B5E9D /* Dictionary+RandomKit.swift */,
+				52737DF41DBEBEED009B5E9D /* FloatingPoint+RandomKit.swift */,
+				52737DF51DBEBEED009B5E9D /* Integer+RandomKit.swift */,
+				5230293B1DC54137007530CD /* Range+RandomKit.swift */,
+				52A6B1311E329045001533D3 /* Set+RandomKit.swift */,
+				52A248B41DC68200004C9991 /* Strideable+RandomKit.swift */,
+				52737DF81DBEBEED009B5E9D /* String+RandomKit.swift */,
+				52737DF91DBEBEED009B5E9D /* UnicodeScalar+RandomKit.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		52737E261DBEBEF8009B5E9D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				52737E281DBEBEF8009B5E9D /* Color+RandomKit.swift */,
+				52737E291DBEBEF8009B5E9D /* Date+RandomKit.swift */,
+				52737E451DBEC9C6009B5E9D /* Decimal+RandomKit.swift */,
+				52737E2A1DBEBEF8009B5E9D /* NSNumber+RandomKit.swift */,
+				52CA181E1E63A818004C18FA /* NSArray+RandomKit.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		528200851BC9C460001FDD58 = {
+			isa = PBXGroup;
+			children = (
+				52F9E6DA1CA5B4DF00039162 /* Sources */,
+				52ADBED91DE55CD8004CB28A /* Dependencies */,
+				525EB2BC1DBD606F00E8B246 /* Support */,
+				528200F21BC9FA42001FDD58 /* Tests */,
+				528200921BC9C4A2001FDD58 /* Products */,
+				524083961CA5B31E00AB8851 /* RandomKit.playground */,
+				52F9E7601CA5BBBA00039162 /* Package.swift */,
+				524083971CA5B35800AB8851 /* LICENSE.md */,
+			);
+			sourceTree = "<group>";
+		};
+		528200921BC9C4A2001FDD58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528200911BC9C4A2001FDD58 /* RandomKit.framework */,
+				5282009F1BC9C4B6001FDD58 /* RandomKit.framework */,
+				528200AC1BC9C4C0001FDD58 /* RandomKit.framework */,
+				528200F11BC9FA42001FDD58 /* RandomKit macOS Tests.xctest */,
+				52C96A1F1BD9828F00C3CBE0 /* RandomKit.framework */,
+				52B64AC01E8857AF000BBDDA /* RandomKit iOS Tests.xctest */,
+				52B64ACF1E8857D0000BBDDA /* RandomKit tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528200F21BC9FA42001FDD58 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				528200F51BC9FA42001FDD58 /* Info.plist */,
+				52BD455D1E6E56CE00E2C9A1 /* LinuxMain.swift */,
+				52BD45621E6E56D700E2C9A1 /* RandomKitTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		52A6B1531E37B980001533D3 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				52A6B1581E37B9A6001533D3 /* Typecasting.swift */,
+				52485F661E3FEE11007C53AC /* StackArray.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		52ADBED91DE55CD8004CB28A /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */,
+				5243008F1EFC61B600333F46 /* Threadly.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		52ADBEDB1DE55CE9004CB28A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52ADBEE21DE55CEA004CB28A /* ShiftOperations.framework */,
+				52ADBEE41DE55CEA004CB28A /* ShiftOperations.framework */,
+				52ADBEE61DE55CEA004CB28A /* ShiftOperations.framework */,
+				52ADBEE81DE55CEA004CB28A /* ShiftOperations.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52BD45621E6E56D700E2C9A1 /* RandomKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				522523601F329CA8007274AC /* Tester.swift */,
+				52BD45631E6E56D700E2C9A1 /* ConstantTests.swift */,
+				52D5BF0F1E9E3E1A006C1E60 /* ChaChaTests.swift */,
+				528E480A1F0FD42100F610CD /* XoroshiroTests.swift */,
+			);
+			path = RandomKitTests;
+			sourceTree = "<group>";
+		};
+		52CA18171E623DEC004C18FA /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				52CA18181E623DF6004C18FA /* RandomTuple.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		52D47D711E3165360050588E /* RandomGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				52D47D721E3165360050588E /* RandomGenerator.swift */,
+				52D47D861E317D6B0050588E /* Seedable.swift */,
+				5290FC551E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift */,
+				52D47D811E316B9A0050588E /* RandomBytesGenerator.swift */,
+				52D47D771E31654B0050588E /* DeviceRandom.swift */,
+				520396741E9AFD8F0041FAA3 /* ChaCha.swift */,
+				52D47D7C1E3165C50050588E /* MersenneTwister.swift */,
+				52D47D8B1E3180B60050588E /* Xoroshiro.swift */,
+				52CE98D01E4052ED00DA001B /* Xorshift.swift */,
+				522268EB1E4163EC00C8865A /* XorshiftStar.swift */,
+				52D47D901E3186EA0050588E /* ARC4Random.swift */,
+				529F07511E8BA8180079AB0F /* ThreadLocal.swift */,
+			);
+			path = RandomGenerator;
+			sourceTree = "<group>";
+		};
+		52F9E6DA1CA5B4DF00039162 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				521771611DE6DF7600DD4584 /* RandomKit */,
+				521771661DE6DF9C00DD4584 /* benchmark */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5282008E1BC9C4A2001FDD58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5282009C1BC9C4B6001FDD58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528200A91BC9C4C0001FDD58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C96A1C1BD9828F00C3CBE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		528200901BC9C4A2001FDD58 /* RandomKit macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528200991BC9C4A2001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit macOS" */;
+			buildPhases = (
+				5282008C1BC9C4A2001FDD58 /* Sources */,
+				5282008D1BC9C4A2001FDD58 /* Frameworks */,
+				5282008E1BC9C4A2001FDD58 /* Headers */,
+				5282008F1BC9C4A2001FDD58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524300A21EFC61CB00333F46 /* PBXTargetDependency */,
+				525FEEDB1EE67B5D0015254D /* PBXTargetDependency */,
+			);
+			name = "RandomKit macOS";
+			productName = "RandomKit-OSX";
+			productReference = 528200911BC9C4A2001FDD58 /* RandomKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5282009E1BC9C4B6001FDD58 /* RandomKit iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528200A41BC9C4B6001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit iOS" */;
+			buildPhases = (
+				5282009A1BC9C4B6001FDD58 /* Sources */,
+				5282009B1BC9C4B6001FDD58 /* Frameworks */,
+				5282009C1BC9C4B6001FDD58 /* Headers */,
+				5282009D1BC9C4B6001FDD58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524300A91EFC61ED00333F46 /* PBXTargetDependency */,
+				524300A71EFC61E800333F46 /* PBXTargetDependency */,
+			);
+			name = "RandomKit iOS";
+			productName = "RandomKit-iOS";
+			productReference = 5282009F1BC9C4B6001FDD58 /* RandomKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		528200AB1BC9C4C0001FDD58 /* RandomKit watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528200B11BC9C4C0001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit watchOS" */;
+			buildPhases = (
+				528200A71BC9C4C0001FDD58 /* Sources */,
+				528200A81BC9C4C0001FDD58 /* Frameworks */,
+				528200A91BC9C4C0001FDD58 /* Headers */,
+				528200AA1BC9C4C0001FDD58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524300AE1EFC620500333F46 /* PBXTargetDependency */,
+				524300AC1EFC61FE00333F46 /* PBXTargetDependency */,
+			);
+			name = "RandomKit watchOS";
+			productName = "RandomKit-watchOS";
+			productReference = 528200AC1BC9C4C0001FDD58 /* RandomKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		528200F01BC9FA42001FDD58 /* RandomKit macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528200F91BC9FA42001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit macOS Tests" */;
+			buildPhases = (
+				528200ED1BC9FA42001FDD58 /* Sources */,
+				528200EE1BC9FA42001FDD58 /* Frameworks */,
+				528200EF1BC9FA42001FDD58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				528200F81BC9FA42001FDD58 /* PBXTargetDependency */,
+			);
+			name = "RandomKit macOS Tests";
+			productName = RandomKitTests;
+			productReference = 528200F11BC9FA42001FDD58 /* RandomKit macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52B64ABF1E8857AF000BBDDA /* RandomKit iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B64AC81E8857AF000BBDDA /* Build configuration list for PBXNativeTarget "RandomKit iOS Tests" */;
+			buildPhases = (
+				52B64ABC1E8857AF000BBDDA /* Sources */,
+				52B64ABD1E8857AF000BBDDA /* Frameworks */,
+				52B64ABE1E8857AF000BBDDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B64AC71E8857AF000BBDDA /* PBXTargetDependency */,
+			);
+			name = "RandomKit iOS Tests";
+			productName = "RandomKit iOS Tests";
+			productReference = 52B64AC01E8857AF000BBDDA /* RandomKit iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52B64ACE1E8857D0000BBDDA /* RandomKit tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B64AD71E8857D0000BBDDA /* Build configuration list for PBXNativeTarget "RandomKit tvOS Tests" */;
+			buildPhases = (
+				52B64ACB1E8857D0000BBDDA /* Sources */,
+				52B64ACC1E8857D0000BBDDA /* Frameworks */,
+				52B64ACD1E8857D0000BBDDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B64AD61E8857D0000BBDDA /* PBXTargetDependency */,
+			);
+			name = "RandomKit tvOS Tests";
+			productName = "RandomKit tvOS Tests";
+			productReference = 52B64ACF1E8857D0000BBDDA /* RandomKit tvOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52C96A1E1BD9828F00C3CBE0 /* RandomKit tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C96A241BD9828F00C3CBE0 /* Build configuration list for PBXNativeTarget "RandomKit tvOS" */;
+			buildPhases = (
+				52C96A1A1BD9828F00C3CBE0 /* Sources */,
+				52C96A1B1BD9828F00C3CBE0 /* Frameworks */,
+				52C96A1C1BD9828F00C3CBE0 /* Headers */,
+				52C96A1D1BD9828F00C3CBE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524300B31EFC621C00333F46 /* PBXTargetDependency */,
+				524300B11EFC621600333F46 /* PBXTargetDependency */,
+			);
+			name = "RandomKit tvOS";
+			productName = "RandomKit tvOS";
+			productReference = 52C96A1F1BD9828F00C3CBE0 /* RandomKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528200861BC9C460001FDD58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Nikolai Vazquez";
+				TargetAttributes = {
+					528200901BC9C4A2001FDD58 = {
+						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0900;
+					};
+					5282009E1BC9C4B6001FDD58 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					528200AB1BC9C4C0001FDD58 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					528200F01BC9FA42001FDD58 = {
+						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0900;
+					};
+					52B64ABF1E8857AF000BBDDA = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					52B64ACE1E8857D0000BBDDA = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					52C96A1E1BD9828F00C3CBE0 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 528200891BC9C460001FDD58 /* Build configuration list for PBXProject "RandomKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 528200851BC9C460001FDD58;
+			productRefGroup = 528200921BC9C4A2001FDD58 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52ADBEDB1DE55CE9004CB28A /* Products */;
+					ProjectRef = 52ADBEDA1DE55CE9004CB28A /* ShiftOperations.xcodeproj */;
+				},
+				{
+					ProductGroup = 524300901EFC61B600333F46 /* Products */;
+					ProjectRef = 5243008F1EFC61B600333F46 /* Threadly.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				528200901BC9C4A2001FDD58 /* RandomKit macOS */,
+				5282009E1BC9C4B6001FDD58 /* RandomKit iOS */,
+				528200AB1BC9C4C0001FDD58 /* RandomKit watchOS */,
+				52C96A1E1BD9828F00C3CBE0 /* RandomKit tvOS */,
+				528200F01BC9FA42001FDD58 /* RandomKit macOS Tests */,
+				52B64ABF1E8857AF000BBDDA /* RandomKit iOS Tests */,
+				52B64ACE1E8857D0000BBDDA /* RandomKit tvOS Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5243009A1EFC61B600333F46 /* Threadly.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Threadly.framework;
+			remoteRef = 524300991EFC61B600333F46 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5243009C1EFC61B600333F46 /* Threadly.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Threadly.framework;
+			remoteRef = 5243009B1EFC61B600333F46 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5243009E1EFC61B600333F46 /* Threadly.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Threadly.framework;
+			remoteRef = 5243009D1EFC61B600333F46 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		524300A01EFC61B600333F46 /* Threadly.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Threadly.framework;
+			remoteRef = 5243009F1EFC61B600333F46 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52ADBEE21DE55CEA004CB28A /* ShiftOperations.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShiftOperations.framework;
+			remoteRef = 52ADBEE11DE55CEA004CB28A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52ADBEE41DE55CEA004CB28A /* ShiftOperations.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShiftOperations.framework;
+			remoteRef = 52ADBEE31DE55CEA004CB28A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52ADBEE61DE55CEA004CB28A /* ShiftOperations.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShiftOperations.framework;
+			remoteRef = 52ADBEE51DE55CEA004CB28A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52ADBEE81DE55CEA004CB28A /* ShiftOperations.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShiftOperations.framework;
+			remoteRef = 52ADBEE71DE55CEA004CB28A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5282008F1BC9C4A2001FDD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5282009D1BC9C4B6001FDD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528200AA1BC9C4C0001FDD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528200EF1BC9FA42001FDD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B64ABE1E8857AF000BBDDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B64ACD1E8857D0000BBDDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C96A1D1BD9828F00C3CBE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5282008C1BC9C4A2001FDD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F1E311E31303F00BDE35F /* UnsafeRandom.swift in Sources */,
+				524F1E3D1E3132F800BDE35F /* RandomEnum.swift in Sources */,
+				522268EC1E4163EC00C8865A /* XorshiftStar.swift in Sources */,
+				524F1E111E312E6000BDE35F /* RandomThroughValue.swift in Sources */,
+				52D47D871E317D6B0050588E /* Seedable.swift in Sources */,
+				524F1E561E31364B00BDE35F /* Array+RandomKit.swift in Sources */,
+				524F1E0D1E312E2900BDE35F /* RandomToValue.swift in Sources */,
+				524F1E521E31360300BDE35F /* Character+RandomKit.swift in Sources */,
+				5247B99D1E890BB200C6B60E /* RandomRetrievable.swift in Sources */,
+				52CA181F1E63A818004C18FA /* NSArray+RandomKit.swift in Sources */,
+				529F07521E8BA8180079AB0F /* ThreadLocal.swift in Sources */,
+				52D47D411E315D840050588E /* Strideable+RandomKit.swift in Sources */,
+				524F1E051E312E0500BDE35F /* RandomWithMax.swift in Sources */,
+				52A6B1321E329045001533D3 /* Set+RandomKit.swift in Sources */,
+				52D47D451E315DC60050588E /* String+RandomKit.swift in Sources */,
+				524F1E391E31312800BDE35F /* Integer+RandomKit.swift in Sources */,
+				524F1E211E312F8100BDE35F /* RandomWithExactWidth.swift in Sources */,
+				524F1E1D1E312F6000BDE35F /* RandomWithMaxWidth.swift in Sources */,
+				52485F671E3FEE11007C53AC /* StackArray.swift in Sources */,
+				524F1E251E312FCE00BDE35F /* UniqueShuffleable.swift in Sources */,
+				5290FC561E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */,
+				524F1E191E312F0A00BDE35F /* RandomInClosedRange.swift in Sources */,
+				52D47D391E313FCD0050588E /* Range+RandomKit.swift in Sources */,
+				524F1DFD1E312D5E00BDE35F /* Random.swift in Sources */,
+				52D47D691E3161E40050588E /* NSNumber+RandomKit.swift in Sources */,
+				52D47D651E3161870050588E /* Decimal+RandomKit.swift in Sources */,
+				524F1E151E312EC800BDE35F /* RandomInRange.swift in Sources */,
+				52D47D911E3186EA0050588E /* ARC4Random.swift in Sources */,
+				524F1E451E3134FA00BDE35F /* RandomWithAll.swift in Sources */,
+				52D47D311E313F010050588E /* Dictionary+RandomKit.swift in Sources */,
+				52D47D821E316B9A0050588E /* RandomBytesGenerator.swift in Sources */,
+				52D47D591E31607C0050588E /* CGSize+RandomKit.swift in Sources */,
+				52D47D4D1E315FCD0050588E /* CGFloat+RandomKit.swift in Sources */,
+				52D47D511E3160070050588E /* CGPoint+RandomKit.swift in Sources */,
+				52A6B1591E37B9A6001533D3 /* Typecasting.swift in Sources */,
+				524F1E5A1E31370C00BDE35F /* FloatingPoint+RandomKit.swift in Sources */,
+				524F1E291E312FD300BDE35F /* Shuffleable.swift in Sources */,
+				52D47D781E31654B0050588E /* DeviceRandom.swift in Sources */,
+				524F1E2D1E31301600BDE35F /* RandomRawRepresentable.swift in Sources */,
+				524F1E441E31335200BDE35F /* Collection+RandomKit.swift in Sources */,
+				52CA18191E623DF6004C18FA /* RandomTuple.swift in Sources */,
+				52D47D5D1E3160A10050588E /* CGVector+RandomKit.swift in Sources */,
+				524F1E4E1E31356E00BDE35F /* UnicodeScalar+RandomKit.swift in Sources */,
+				52D47D611E3161060050588E /* Date+RandomKit.swift in Sources */,
+				524F1E091E312E1200BDE35F /* RandomWithMin.swift in Sources */,
+				5268B1891F10551E00983C33 /* Trivial.swift in Sources */,
+				52D47D551E3160190050588E /* CGRect+RandomKit.swift in Sources */,
+				52CE98D11E4052ED00DA001B /* Xorshift.swift in Sources */,
+				52D47D8C1E3180B60050588E /* Xoroshiro.swift in Sources */,
+				524F1E4A1E31352B00BDE35F /* Bool+RandomKit.swift in Sources */,
+				52D47D491E315F7D0050588E /* Color+RandomKit.swift in Sources */,
+				520396751E9AFD8F0041FAA3 /* ChaCha.swift in Sources */,
+				52D47D7D1E3165C50050588E /* MersenneTwister.swift in Sources */,
+				52D47D731E3165360050588E /* RandomGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5282009A1BC9C4B6001FDD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F1E321E31303F00BDE35F /* UnsafeRandom.swift in Sources */,
+				524F1E3E1E3132F900BDE35F /* RandomEnum.swift in Sources */,
+				522268ED1E4163EC00C8865A /* XorshiftStar.swift in Sources */,
+				524F1E121E312E6100BDE35F /* RandomThroughValue.swift in Sources */,
+				52D47D881E317D6B0050588E /* Seedable.swift in Sources */,
+				524F1E571E31364C00BDE35F /* Array+RandomKit.swift in Sources */,
+				524F1E0E1E312E2900BDE35F /* RandomToValue.swift in Sources */,
+				524F1E531E31360400BDE35F /* Character+RandomKit.swift in Sources */,
+				5247B99E1E890BB200C6B60E /* RandomRetrievable.swift in Sources */,
+				52CA18201E63A818004C18FA /* NSArray+RandomKit.swift in Sources */,
+				529F07531E8BA8180079AB0F /* ThreadLocal.swift in Sources */,
+				52D47D421E315D850050588E /* Strideable+RandomKit.swift in Sources */,
+				524F1E061E312E0500BDE35F /* RandomWithMax.swift in Sources */,
+				52A6B1331E329045001533D3 /* Set+RandomKit.swift in Sources */,
+				52D47D461E315DC60050588E /* String+RandomKit.swift in Sources */,
+				524F1E3A1E31312900BDE35F /* Integer+RandomKit.swift in Sources */,
+				524F1E221E312F8100BDE35F /* RandomWithExactWidth.swift in Sources */,
+				524F1E1E1E312F6000BDE35F /* RandomWithMaxWidth.swift in Sources */,
+				52485F681E3FEE11007C53AC /* StackArray.swift in Sources */,
+				524F1E261E312FCF00BDE35F /* UniqueShuffleable.swift in Sources */,
+				5290FC571E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */,
+				524F1E1A1E312F0B00BDE35F /* RandomInClosedRange.swift in Sources */,
+				52D47D3A1E313FCD0050588E /* Range+RandomKit.swift in Sources */,
+				524F1E021E312D5F00BDE35F /* Random.swift in Sources */,
+				52D47D6A1E3161E50050588E /* NSNumber+RandomKit.swift in Sources */,
+				52D47D661E3161870050588E /* Decimal+RandomKit.swift in Sources */,
+				524F1E161E312EC800BDE35F /* RandomInRange.swift in Sources */,
+				52D47D921E3186EA0050588E /* ARC4Random.swift in Sources */,
+				524F1E461E3134FB00BDE35F /* RandomWithAll.swift in Sources */,
+				52D47D361E313F010050588E /* Dictionary+RandomKit.swift in Sources */,
+				52D47D831E316B9A0050588E /* RandomBytesGenerator.swift in Sources */,
+				52D47D5A1E31607D0050588E /* CGSize+RandomKit.swift in Sources */,
+				52D47D4E1E315FCE0050588E /* CGFloat+RandomKit.swift in Sources */,
+				52D47D521E3160080050588E /* CGPoint+RandomKit.swift in Sources */,
+				52A6B15A1E37B9A6001533D3 /* Typecasting.swift in Sources */,
+				524F1E5B1E31370D00BDE35F /* FloatingPoint+RandomKit.swift in Sources */,
+				524F1E2A1E312FD300BDE35F /* Shuffleable.swift in Sources */,
+				52D47D791E31654B0050588E /* DeviceRandom.swift in Sources */,
+				524F1E2E1E31301600BDE35F /* RandomRawRepresentable.swift in Sources */,
+				524F1E431E31335100BDE35F /* Collection+RandomKit.swift in Sources */,
+				52CA181A1E623DF6004C18FA /* RandomTuple.swift in Sources */,
+				52D47D5E1E3160A10050588E /* CGVector+RandomKit.swift in Sources */,
+				524F1E4F1E31356F00BDE35F /* UnicodeScalar+RandomKit.swift in Sources */,
+				52D47D621E3161070050588E /* Date+RandomKit.swift in Sources */,
+				524F1E0A1E312E1300BDE35F /* RandomWithMin.swift in Sources */,
+				5268B18A1F10551E00983C33 /* Trivial.swift in Sources */,
+				52D47D561E3160190050588E /* CGRect+RandomKit.swift in Sources */,
+				52CE98D21E4052ED00DA001B /* Xorshift.swift in Sources */,
+				52D47D8D1E3180B60050588E /* Xoroshiro.swift in Sources */,
+				524F1E4B1E31352D00BDE35F /* Bool+RandomKit.swift in Sources */,
+				52D47D4A1E315F7E0050588E /* Color+RandomKit.swift in Sources */,
+				520396761E9AFD8F0041FAA3 /* ChaCha.swift in Sources */,
+				52D47D7E1E3165C50050588E /* MersenneTwister.swift in Sources */,
+				52D47D741E3165360050588E /* RandomGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528200A71BC9C4C0001FDD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F1E331E31304000BDE35F /* UnsafeRandom.swift in Sources */,
+				524F1E3F1E3132F900BDE35F /* RandomEnum.swift in Sources */,
+				522268EE1E4163EC00C8865A /* XorshiftStar.swift in Sources */,
+				524F1E131E312E6100BDE35F /* RandomThroughValue.swift in Sources */,
+				52D47D891E317D6B0050588E /* Seedable.swift in Sources */,
+				524F1E581E31364C00BDE35F /* Array+RandomKit.swift in Sources */,
+				524F1E0F1E312E2A00BDE35F /* RandomToValue.swift in Sources */,
+				524F1E541E31360500BDE35F /* Character+RandomKit.swift in Sources */,
+				5247B99F1E890BB200C6B60E /* RandomRetrievable.swift in Sources */,
+				52CA18211E63A818004C18FA /* NSArray+RandomKit.swift in Sources */,
+				529F07541E8BA8180079AB0F /* ThreadLocal.swift in Sources */,
+				52D47D431E315D860050588E /* Strideable+RandomKit.swift in Sources */,
+				524F1E071E312E0600BDE35F /* RandomWithMax.swift in Sources */,
+				52A6B1341E329045001533D3 /* Set+RandomKit.swift in Sources */,
+				52D47D471E315DC70050588E /* String+RandomKit.swift in Sources */,
+				524F1E3B1E31312900BDE35F /* Integer+RandomKit.swift in Sources */,
+				524F1E231E312F8200BDE35F /* RandomWithExactWidth.swift in Sources */,
+				524F1E1F1E312F6100BDE35F /* RandomWithMaxWidth.swift in Sources */,
+				52485F691E3FEE11007C53AC /* StackArray.swift in Sources */,
+				524F1E271E312FCF00BDE35F /* UniqueShuffleable.swift in Sources */,
+				5290FC581E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */,
+				524F1E1B1E312F0B00BDE35F /* RandomInClosedRange.swift in Sources */,
+				52D47D3B1E313FCE0050588E /* Range+RandomKit.swift in Sources */,
+				524F1E031E312D5F00BDE35F /* Random.swift in Sources */,
+				52D47D6B1E3161E50050588E /* NSNumber+RandomKit.swift in Sources */,
+				52D47D671E3161880050588E /* Decimal+RandomKit.swift in Sources */,
+				524F1E171E312EC900BDE35F /* RandomInRange.swift in Sources */,
+				52D47D931E3186EA0050588E /* ARC4Random.swift in Sources */,
+				524F1E471E3134FB00BDE35F /* RandomWithAll.swift in Sources */,
+				52D47D371E313F020050588E /* Dictionary+RandomKit.swift in Sources */,
+				52D47D841E316B9A0050588E /* RandomBytesGenerator.swift in Sources */,
+				52D47D5B1E31607D0050588E /* CGSize+RandomKit.swift in Sources */,
+				52D47D4F1E315FCF0050588E /* CGFloat+RandomKit.swift in Sources */,
+				52D47D531E3160080050588E /* CGPoint+RandomKit.swift in Sources */,
+				52A6B15B1E37B9A6001533D3 /* Typecasting.swift in Sources */,
+				524F1E5C1E31370E00BDE35F /* FloatingPoint+RandomKit.swift in Sources */,
+				524F1E2C1E312FD400BDE35F /* Shuffleable.swift in Sources */,
+				52D47D7A1E31654B0050588E /* DeviceRandom.swift in Sources */,
+				524F1E2F1E31301700BDE35F /* RandomRawRepresentable.swift in Sources */,
+				524F1E421E31335100BDE35F /* Collection+RandomKit.swift in Sources */,
+				52CA181B1E623DF6004C18FA /* RandomTuple.swift in Sources */,
+				52D47D5F1E3160A10050588E /* CGVector+RandomKit.swift in Sources */,
+				524F1E501E31357000BDE35F /* UnicodeScalar+RandomKit.swift in Sources */,
+				52D47D631E3161070050588E /* Date+RandomKit.swift in Sources */,
+				524F1E0B1E312E1300BDE35F /* RandomWithMin.swift in Sources */,
+				5268B18B1F10551E00983C33 /* Trivial.swift in Sources */,
+				52D47D581E31601A0050588E /* CGRect+RandomKit.swift in Sources */,
+				52CE98D31E4052ED00DA001B /* Xorshift.swift in Sources */,
+				52D47D8E1E3180B60050588E /* Xoroshiro.swift in Sources */,
+				524F1E4C1E31352D00BDE35F /* Bool+RandomKit.swift in Sources */,
+				52D47D4B1E315F7E0050588E /* Color+RandomKit.swift in Sources */,
+				520396771E9AFD8F0041FAA3 /* ChaCha.swift in Sources */,
+				52D47D7F1E3165C50050588E /* MersenneTwister.swift in Sources */,
+				52D47D751E3165360050588E /* RandomGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528200ED1BC9FA42001FDD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BD45681E6E572700E2C9A1 /* ConstantTests.swift in Sources */,
+				52D5BF141E9E3E37006C1E60 /* ChaChaTests.swift in Sources */,
+				522523611F329CA8007274AC /* Tester.swift in Sources */,
+				528E480B1F0FD42100F610CD /* XoroshiroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B64ABC1E8857AF000BBDDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B64ADA1E885842000BBDDA /* ConstantTests.swift in Sources */,
+				52D5BF151E9E3E38006C1E60 /* ChaChaTests.swift in Sources */,
+				522523621F329CA8007274AC /* Tester.swift in Sources */,
+				528E480C1F0FD42100F610CD /* XoroshiroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B64ACB1E8857D0000BBDDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B64ADB1E885843000BBDDA /* ConstantTests.swift in Sources */,
+				52D5BF161E9E3E38006C1E60 /* ChaChaTests.swift in Sources */,
+				522523631F329CA8007274AC /* Tester.swift in Sources */,
+				528E480D1F0FD42100F610CD /* XoroshiroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C96A1A1BD9828F00C3CBE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F1E341E31304100BDE35F /* UnsafeRandom.swift in Sources */,
+				524F1E401E3132FA00BDE35F /* RandomEnum.swift in Sources */,
+				522268EF1E4163EC00C8865A /* XorshiftStar.swift in Sources */,
+				524F1E141E312E6100BDE35F /* RandomThroughValue.swift in Sources */,
+				52D47D8A1E317D6B0050588E /* Seedable.swift in Sources */,
+				524F1E591E31364D00BDE35F /* Array+RandomKit.swift in Sources */,
+				524F1E101E312E2A00BDE35F /* RandomToValue.swift in Sources */,
+				524F1E551E31360600BDE35F /* Character+RandomKit.swift in Sources */,
+				5247B9A01E890BB200C6B60E /* RandomRetrievable.swift in Sources */,
+				52CA18221E63A818004C18FA /* NSArray+RandomKit.swift in Sources */,
+				529F07551E8BA8180079AB0F /* ThreadLocal.swift in Sources */,
+				52D47D441E315D870050588E /* Strideable+RandomKit.swift in Sources */,
+				524F1E081E312E0600BDE35F /* RandomWithMax.swift in Sources */,
+				52A6B1351E329045001533D3 /* Set+RandomKit.swift in Sources */,
+				52D47D481E315DC70050588E /* String+RandomKit.swift in Sources */,
+				524F1E3C1E31312A00BDE35F /* Integer+RandomKit.swift in Sources */,
+				524F1E241E312F8200BDE35F /* RandomWithExactWidth.swift in Sources */,
+				524F1E201E312F6100BDE35F /* RandomWithMaxWidth.swift in Sources */,
+				52485F6A1E3FEE11007C53AC /* StackArray.swift in Sources */,
+				524F1E281E312FD000BDE35F /* UniqueShuffleable.swift in Sources */,
+				5290FC591E7C5AFA008CA2AA /* ReseedingRandomGenerator.swift in Sources */,
+				524F1E1C1E312F0B00BDE35F /* RandomInClosedRange.swift in Sources */,
+				52D47D3C1E313FCF0050588E /* Range+RandomKit.swift in Sources */,
+				524F1E041E312D6000BDE35F /* Random.swift in Sources */,
+				52D47D6C1E3161E60050588E /* NSNumber+RandomKit.swift in Sources */,
+				52D47D681E3161890050588E /* Decimal+RandomKit.swift in Sources */,
+				524F1E181E312EC900BDE35F /* RandomInRange.swift in Sources */,
+				52D47D941E3186EA0050588E /* ARC4Random.swift in Sources */,
+				524F1E481E3134FC00BDE35F /* RandomWithAll.swift in Sources */,
+				52D47D381E313F030050588E /* Dictionary+RandomKit.swift in Sources */,
+				52D47D851E316B9A0050588E /* RandomBytesGenerator.swift in Sources */,
+				52D47D5C1E31607E0050588E /* CGSize+RandomKit.swift in Sources */,
+				52D47D501E315FCF0050588E /* CGFloat+RandomKit.swift in Sources */,
+				52D47D541E3160090050588E /* CGPoint+RandomKit.swift in Sources */,
+				52A6B15C1E37B9A6001533D3 /* Typecasting.swift in Sources */,
+				524F1E5D1E31370E00BDE35F /* FloatingPoint+RandomKit.swift in Sources */,
+				524F1E2B1E312FD400BDE35F /* Shuffleable.swift in Sources */,
+				52D47D7B1E31654B0050588E /* DeviceRandom.swift in Sources */,
+				524F1E301E31301700BDE35F /* RandomRawRepresentable.swift in Sources */,
+				524F1E411E31335000BDE35F /* Collection+RandomKit.swift in Sources */,
+				52CA181C1E623DF6004C18FA /* RandomTuple.swift in Sources */,
+				52D47D601E3160A20050588E /* CGVector+RandomKit.swift in Sources */,
+				524F1E511E31357000BDE35F /* UnicodeScalar+RandomKit.swift in Sources */,
+				52D47D641E3161080050588E /* Date+RandomKit.swift in Sources */,
+				524F1E0C1E312E1400BDE35F /* RandomWithMin.swift in Sources */,
+				5268B18C1F10551E00983C33 /* Trivial.swift in Sources */,
+				52D47D571E31601A0050588E /* CGRect+RandomKit.swift in Sources */,
+				52CE98D41E4052ED00DA001B /* Xorshift.swift in Sources */,
+				52D47D8F1E3180B60050588E /* Xoroshiro.swift in Sources */,
+				524F1E4D1E31352F00BDE35F /* Bool+RandomKit.swift in Sources */,
+				52D47D4C1E315F7F0050588E /* Color+RandomKit.swift in Sources */,
+				520396781E9AFD8F0041FAA3 /* ChaCha.swift in Sources */,
+				52D47D801E3165C50050588E /* MersenneTwister.swift in Sources */,
+				52D47D761E3165360050588E /* RandomGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		524300A21EFC61CB00333F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Threadly macOS";
+			targetProxy = 524300A11EFC61CB00333F46 /* PBXContainerItemProxy */;
+		};
+		524300A71EFC61E800333F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShiftOperations iOS";
+			targetProxy = 524300A61EFC61E800333F46 /* PBXContainerItemProxy */;
+		};
+		524300A91EFC61ED00333F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Threadly iOS";
+			targetProxy = 524300A81EFC61ED00333F46 /* PBXContainerItemProxy */;
+		};
+		524300AC1EFC61FE00333F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShiftOperations watchOS";
+			targetProxy = 524300AB1EFC61FE00333F46 /* PBXContainerItemProxy */;
+		};
+		524300AE1EFC620500333F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Threadly watchOS";
+			targetProxy = 524300AD1EFC620500333F46 /* PBXContainerItemProxy */;
+		};
+		524300B11EFC621600333F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShiftOperations tvOS";
+			targetProxy = 524300B01EFC621600333F46 /* PBXContainerItemProxy */;
+		};
+		524300B31EFC621C00333F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Threadly tvOS";
+			targetProxy = 524300B21EFC621C00333F46 /* PBXContainerItemProxy */;
+		};
+		525FEEDB1EE67B5D0015254D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShiftOperations macOS";
+			targetProxy = 525FEEDA1EE67B5D0015254D /* PBXContainerItemProxy */;
+		};
+		528200F81BC9FA42001FDD58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 528200901BC9C4A2001FDD58 /* RandomKit macOS */;
+			targetProxy = 528200F71BC9FA42001FDD58 /* PBXContainerItemProxy */;
+		};
+		52B64AC71E8857AF000BBDDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5282009E1BC9C4B6001FDD58 /* RandomKit iOS */;
+			targetProxy = 52B64AC61E8857AF000BBDDA /* PBXContainerItemProxy */;
+		};
+		52B64AD61E8857D0000BBDDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52C96A1E1BD9828F00C3CBE0 /* RandomKit tvOS */;
+			targetProxy = 52B64AD51E8857D0000BBDDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5282008A1BC9C460001FDD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		5282008B1BC9C460001FDD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		528200971BC9C4A2001FDD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		528200981BC9C4A2001FDD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		528200A51BC9C4B6001FDD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		528200A61BC9C4B6001FDD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		528200B21BC9C4C0001FDD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		528200B31BC9C4C0001FDD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		528200FA1BC9FA42001FDD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		528200FB1BC9FA42001FDD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52B64AC91E8857AF000BBDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolaivazquez.RandomKit-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52B64ACA1E8857AF000BBDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolaivazquez.RandomKit-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52B64AD81E8857D0000BBDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolaivazquez.RandomKit-tvOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		52B64AD91E8857D0000BBDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolaivazquez.RandomKit-tvOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52C96A251BD9828F00C3CBE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52C96A261BD9828F00C3CBE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikolaivazquez.RandomKit;
+				PRODUCT_NAME = RandomKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528200891BC9C460001FDD58 /* Build configuration list for PBXProject "RandomKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5282008A1BC9C460001FDD58 /* Debug */,
+				5282008B1BC9C460001FDD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528200991BC9C4A2001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528200971BC9C4A2001FDD58 /* Debug */,
+				528200981BC9C4A2001FDD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528200A41BC9C4B6001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528200A51BC9C4B6001FDD58 /* Debug */,
+				528200A61BC9C4B6001FDD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528200B11BC9C4C0001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528200B21BC9C4C0001FDD58 /* Debug */,
+				528200B31BC9C4C0001FDD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528200F91BC9FA42001FDD58 /* Build configuration list for PBXNativeTarget "RandomKit macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528200FA1BC9FA42001FDD58 /* Debug */,
+				528200FB1BC9FA42001FDD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B64AC81E8857AF000BBDDA /* Build configuration list for PBXNativeTarget "RandomKit iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B64AC91E8857AF000BBDDA /* Debug */,
+				52B64ACA1E8857AF000BBDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B64AD71E8857D0000BBDDA /* Build configuration list for PBXNativeTarget "RandomKit tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B64AD81E8857D0000BBDDA /* Debug */,
+				52B64AD91E8857D0000BBDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52C96A241BD9828F00C3CBE0 /* Build configuration list for PBXNativeTarget "RandomKit tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C96A251BD9828F00C3CBE0 /* Debug */,
+				52C96A261BD9828F00C3CBE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528200861BC9C460001FDD58 /* Project object */;
+}

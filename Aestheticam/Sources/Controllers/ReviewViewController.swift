@@ -37,13 +37,10 @@ final class ReviewViewController: BaseController {
         
         becomeFirstResponder()
         Synthesizer.shared.playAesthetic()
-        
-        showAdIfNeeded()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        cancelAd()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,21 +48,6 @@ final class ReviewViewController: BaseController {
             dest.image = originalImage
             image = nil
         }
-    }
-    
-    // MARK: Ad Display
-    
-    private func showAdIfNeeded() {
-        guard interstitial == nil, AdManager.shared.shouldShowAd, let inter = AdManager.shared.createInterstitial(with: .AfterCapture) else {
-            return
-        }
-        inter.delegate = self
-        interstitial = inter
-    }
-    
-    private func cancelAd() {
-        interstitial?.delegate = nil
-        interstitial = nil
     }
     
     // MARK: Shaking
@@ -115,14 +97,4 @@ final class ReviewViewController: BaseController {
         }
     }
     
-}
-
-extension ReviewViewController: GADInterstitialDelegate {
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        guard ad == interstitial else {
-            return
-        }
-        ad.present(fromRootViewController: self)
-        AdManager.shared.adWasShown()
-    }
 }

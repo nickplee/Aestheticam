@@ -8,8 +8,6 @@
 
 import Foundation
 import UIKit
-import RandomKit
-
 
 @available(iOS 10.0, *)
 struct FeedbackGenerator {

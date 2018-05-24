@@ -8,14 +8,13 @@
 
 import Foundation
 import AudioKit
-import RandomKit
 import Then
 
 final class Synthesizer {
     
     static let shared = Synthesizer()
     
-    private static let noteRange = 24...84
+    private static let noteRange = MIDINoteNumber(24)...84
     
     private let mixer = AKMixer().then {
         $0.volume = 0.7
@@ -35,7 +34,7 @@ final class Synthesizer {
         
         AudioKit.output = mixer
         
-        mixer.connect(osc)
+        osc.connect(to: mixer)
         
         players += (1...4).flatMap { i in
             let name = "snd\(i)"
@@ -45,7 +44,7 @@ final class Synthesizer {
             do {
                 let file = try AKAudioFile(forReading: url)
                 let player = try AKAudioPlayer(file: file)
-                mixer.connect(player)
+                player.connect(to: mixer)
                 return player
             }
             catch {
@@ -55,16 +54,19 @@ final class Synthesizer {
     }
     
     func startEngine() {
-        AudioKit.start()
+        do {
+            try AudioKit.start()
+        }
+        catch{}
     }
     
     func play(_ includeSounds: Bool = false) {
         DispatchQueue.main.async {
-            if !includeSounds || Bool.random() {
-                self.osc.play(noteNumber: Int.random(within: Synthesizer.noteRange), velocity: 127)
+            if !includeSounds || Bool.random(using: &DeviceRandom.default) {
+                self.osc.play(noteNumber: MIDINoteNumber.random(within: Synthesizer.noteRange), velocity: 127)
             }
             else {
-                self.players.random?.play()
+                self.players.randomElement().play()
             }
         }
     }

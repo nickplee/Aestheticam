@@ -11,7 +11,6 @@ import UIKit
 import CoreGraphics
 import QuartzCore
 import CoreImage
-import RandomKit
 import UIImageSwiftExtensions
 import Vivid
 
@@ -95,13 +94,13 @@ enum Effect {
     private func applyCopy(_ info: ContextInfo, tint: Bool = false) {
         
         let minHeight = 5 * info.colorsPerRow
-        let length = Int.random(within: minHeight ... (info.data.count / 2) - 1)
+        let length = Int.random(in: minHeight ... (info.data.count / 2) - 1, using: &DeviceRandom.default)
         let range1 = randomRegion(length: length, info: info)
         let range2 = randomRegion(range1.upperBound, length: length, info: info)
         
         var src = range1.lowerBound
         
-        let tintColor = Color(color: UIColor.neonColors.random!)
+        let tintColor = Color(color: UIColor.neonColors.randomElement())
         
         for dest in range2.lowerBound ..< range2.upperBound {
             var color = info.data[src]
@@ -114,7 +113,7 @@ enum Effect {
     }
     
     private func applyPlaceImage(_ info: ContextInfo, image img: UIImage? = ImageDownloader.sharedInstance.getRandomImage()) -> CGRect? {
-       
+        
         guard var image = img else {
             return nil
         }
@@ -165,7 +164,7 @@ enum Effect {
         let detector = CIDetector(ofType: CIDetectorTypeFace, context: info.coreImageContext, options: options)
         let ciImage = CIImage(cgImage: info.original)
         
-        guard let features = detector?.features(in: ciImage).flatMap({ $0 as? CIFaceFeature }), let feature = features.shuffled().first else {
+        guard let features = detector?.features(in: ciImage).flatMap({ $0 as? CIFaceFeature }), let feature = features.shuffled(using: &DeviceRandom.default).first else {
             return nil
         }
         

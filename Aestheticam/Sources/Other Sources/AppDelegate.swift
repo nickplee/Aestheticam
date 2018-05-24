@@ -10,7 +10,6 @@ import UIKit
 import ADTransitionController
 import AVFoundation
 import Then
-import RandomKit
 
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -38,7 +37,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             nav.setNavigationBarHidden(true, animated: false)
         }
         
-        ImageDownloader.sharedInstance.download()
+        ImageDownloader.sharedInstance.refreshImages()
         
         if #available(iOS 10.0, *) {
             FeedbackGenerator.shared.start()
@@ -49,7 +48,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         Synthesizer.shared.startEngine()
-        AdManager.shared.reset()
         player.play()
     }
     
