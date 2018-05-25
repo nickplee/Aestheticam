@@ -128,15 +128,16 @@ final class ProcessViewController: BaseController {
             return
         }
         
-        let deepFry = Int.random(within: 0...4) == 2
-        
+        let deepFry = Bool.random()
         if deepFry {
             for _ in 0 ..< Int.random(within: 10 ... 30) {
                 enqueue {
                     p.apply(.deepFry)
                 }
             }
-            p.apply(.overSaturate)
+            enqueue {
+                p.apply(.overSaturate)
+            }
         }
         
         enqueue {
