@@ -65,7 +65,7 @@ final class Synthesizer {
             if !includeSounds || Bool.random(using: &DeviceRandom.default) {
                 self.osc.play(noteNumber: MIDINoteNumber.random(within: Synthesizer.noteRange), velocity: 127)
             }
-            else {
+            else if self.players.isNotEmpty {
                 self.players.randomElement().play()
             }
         }

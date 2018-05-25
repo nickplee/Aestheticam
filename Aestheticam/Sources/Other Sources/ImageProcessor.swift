@@ -53,6 +53,7 @@ private struct Color {
 }
 
 private struct ContextInfo {
+    
     let original: CGImage
     let context: CGContext
     let coreImageContext: CIContext
@@ -62,6 +63,10 @@ private struct ContextInfo {
     let data: UnsafeMutableBufferPointer<Color>
     let colorsPerRow: Int
     let consumedRects: [CGRect]
+    
+    var bounds: CGRect {
+        return CGRect(origin: .zero, size: CGSize(width: width, height: height))
+    }
 }
 
 enum Effect {
@@ -72,6 +77,8 @@ enum Effect {
     case placeImage
     case faceMash
     case starfield
+    case deepFry
+    case overSaturate
     
     private func randomRegion(_ start: Int? = nil, length: Int? = nil, info: ContextInfo) -> Range<UnsafeMutableBufferPointer<Color>.Index> {
         let len = length ?? (Int.positiveRandom() % (info.data.count / 2))
@@ -206,6 +213,48 @@ enum Effect {
         info.context.draw(cgOutput!, in: bounds)
     }
     
+    private func applyDeepFry(_ info: ContextInfo) {
+        guard let img = info.context.makeImage() else {
+            return
+        }
+        
+        let fryScale = CGFloat.random(within: 0.15 ... 0.3)
+        
+        let ci = CIImage(cgImage: img)
+        let scaled = ci.applying(CGAffineTransform(scaleX: fryScale, y: fryScale))
+        
+        guard let scaledCG = info.coreImageContext.createCGImage(scaled, from: scaled.extent) else {
+            return
+        }
+        
+        let ui = UIImage(cgImage: scaledCG)
+
+        guard let friedData = UIImageJPEGRepresentation(ui, 0), let newImage = UIImage(data: friedData)?.cgImage else {
+            return
+        }
+        
+        info.context.draw(newImage, in: info.bounds)
+    }
+    
+    private func applyOverSaturate(_ info: ContextInfo) {
+        guard let img = info.context.makeImage() else {
+            return
+        }
+        
+        let ci = CIImage(cgImage: img)
+        
+        let filter = CIFilter(name: "CIColorControls", withInputParameters: [
+            kCIInputImageKey: ci,
+            kCIInputSaturationKey: 10.0,
+            ])
+        
+        guard let outputCI = filter?.outputImage, let outputCG = info.coreImageContext.createCGImage(outputCI, from: outputCI.extent) else {
+            return
+        }
+        
+        info.context.draw(outputCG, in: info.bounds)
+    }
+    
     fileprivate func apply(_ context: CGContext, original: CGImage, coreImageContext: CIContext, consumedRects: [CGRect]) -> CGRect? {
         
         let w = context.width
@@ -248,6 +297,10 @@ enum Effect {
             rect = applyFaceMash(info)
         case .starfield:
             applyStarField(info)
+        case .deepFry:
+            applyDeepFry(info)
+        case .overSaturate:
+            applyOverSaturate(info)
         }
         
         return rect

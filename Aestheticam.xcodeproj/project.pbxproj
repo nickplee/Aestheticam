@@ -85,6 +85,7 @@
 		B89547881D1B8EA90025FBF0 /* snd3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B89547821D1B8EA90025FBF0 /* snd3.aiff */; };
 		B89547891D1B8EA90025FBF0 /* snd4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B89547831D1B8EA90025FBF0 /* snd4.aiff */; };
 		B89C2D0B20B77A1300B1B10D /* dank_meme_trash in Resources */ = {isa = PBXBuildFile; fileRef = B89C2D0A20B77A1300B1B10D /* dank_meme_trash */; };
+		B89C2D0D20B785C000B1B10D /* ShittyExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C2D0C20B785C000B1B10D /* ShittyExperience.swift */; };
 		B89F9CC81DEE66780024D263 /* RandomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CC71DEE66780024D263 /* RandomExtensions.swift */; };
 		B89F9CCA1DEE678B0024D263 /* FeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */; };
 /* End PBXBuildFile section */
@@ -172,6 +173,7 @@
 		B89547821D1B8EA90025FBF0 /* snd3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = snd3.aiff; sourceTree = "<group>"; };
 		B89547831D1B8EA90025FBF0 /* snd4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = snd4.aiff; sourceTree = "<group>"; };
 		B89C2D0A20B77A1300B1B10D /* dank_meme_trash */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dank_meme_trash; path = images/dank_meme_trash; sourceTree = SOURCE_ROOT; };
+		B89C2D0C20B785C000B1B10D /* ShittyExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShittyExperience.swift; sourceTree = "<group>"; };
 		B89F9CC71DEE66780024D263 /* RandomExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomExtensions.swift; path = Sources/Extensions/RandomExtensions.swift; sourceTree = "<group>"; };
 		B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackGenerator.swift; sourceTree = "<group>"; };
 		B89F9CCD1DEEA5860024D263 /* Ads.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ads.plist; sourceTree = SOURCE_ROOT; };
@@ -418,6 +420,7 @@
 				B895476E1D1B8E850025FBF0 /* Synthesizer.swift */,
 				B85362D61D1B9DA400EEBFF9 /* Analytics.swift */,
 				B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */,
+				B89C2D0C20B785C000B1B10D /* ShittyExperience.swift */,
 			);
 			name = "Other Sources";
 			path = "Sources/Other Sources";
@@ -661,6 +664,7 @@
 				B864574620B61DF6002D68C9 /* CGPoint+RandomKit.swift in Sources */,
 				B864577820B61DF6002D68C9 /* Trivial.swift in Sources */,
 				B864577020B61DF6002D68C9 /* RandomThroughValue.swift in Sources */,
+				B89C2D0D20B785C000B1B10D /* ShittyExperience.swift in Sources */,
 				B864576C20B61DF6002D68C9 /* RandomInClosedRange.swift in Sources */,
 				B89F9CC81DEE66780024D263 /* RandomExtensions.swift in Sources */,
 				B864575A20B61DF6002D68C9 /* UnicodeScalar+RandomKit.swift in Sources */,
