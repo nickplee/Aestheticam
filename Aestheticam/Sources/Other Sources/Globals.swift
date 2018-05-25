@@ -7,22 +7,22 @@
 //
 
 import Foundation
-import FastttCamera
+import LLSimpleCamera
 
 struct Globals {
 
-    static var persistedCaptureDevice: FastttCameraDevice {
+    static var persistedCaptureDevice: LLCameraPosition {
         get {
             let defaults = UserDefaults.standard
             defaults.synchronize()
-            guard let val = defaults.object(forKey: "persistedCaptureDevice") as? Int, let position = FastttCameraDevice(rawValue: val) else {
-                return .rear
+            if let val = defaults.object(forKey: "LLPersistedCaptureDevice") as? UInt {
+                return LLCameraPosition(rawValue: val)
             }
-            return position
+            return LLCameraPositionRear
         }
         set {
             let defaults = UserDefaults.standard
-            defaults.set(newValue.rawValue, forKey: "persistedCaptureDevice")
+            defaults.set(newValue.rawValue, forKey: "LLPersistedCaptureDevice")
             defaults.synchronize()
         }
     }

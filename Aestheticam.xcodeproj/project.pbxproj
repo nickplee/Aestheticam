@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2E70CD706CDAB08B360BA648 /* Pods_Aestheticam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79135688CA8162CDE7D0FD9A /* Pods_Aestheticam.framework */; };
+		B80D67B420B88125001ED402 /* FileExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D67B320B88125001ED402 /* FileExtensions.swift */; };
+		B80D67B620B88307001ED402 /* CaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D67B520B88307001ED402 /* CaptureOutput.swift */; };
+		B80D67B820B88425001ED402 /* ContentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D67B720B88425001ED402 /* ContentProcessor.swift */; };
+		B80D67BE20B8989E001ED402 /* AESCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D67BD20B8989E001ED402 /* AESCamera.m */; };
 		B85362D71D1B9DA400EEBFF9 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85362D61D1B9DA400EEBFF9 /* Analytics.swift */; };
 		B864574520B61DF6002D68C9 /* CGFloat+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864570920B61DF6002D68C9 /* CGFloat+RandomKit.swift */; };
 		B864574620B61DF6002D68C9 /* CGPoint+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864570A20B61DF6002D68C9 /* CGPoint+RandomKit.swift */; };
@@ -68,7 +72,6 @@
 		B89547701D1B8E850025FBF0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89547601D1B8E850025FBF0 /* CameraViewController.swift */; };
 		B89547711D1B8E850025FBF0 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89547611D1B8E850025FBF0 /* ProcessViewController.swift */; };
 		B89547721D1B8E850025FBF0 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89547621D1B8E850025FBF0 /* ReviewViewController.swift */; };
-		B89547731D1B8E850025FBF0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89547641D1B8E850025FBF0 /* Image.swift */; };
 		B89547741D1B8E850025FBF0 /* AestheticApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89547661D1B8E850025FBF0 /* AestheticApplication.swift */; };
 		B89547751D1B8E850025FBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89547671D1B8E850025FBF0 /* AppDelegate.swift */; };
 		B89547761D1B8E850025FBF0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89547681D1B8E850025FBF0 /* Colors.swift */; };
@@ -94,6 +97,12 @@
 		10627CA52DA8E460B4FFB36F /* Pods-Aestheticam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aestheticam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aestheticam/Pods-Aestheticam.release.xcconfig"; sourceTree = "<group>"; };
 		79135688CA8162CDE7D0FD9A /* Pods_Aestheticam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aestheticam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47F4DF5B1B28C26EE476EB7 /* Pods-Aestheticam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aestheticam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aestheticam/Pods-Aestheticam.debug.xcconfig"; sourceTree = "<group>"; };
+		B80D67B320B88125001ED402 /* FileExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileExtensions.swift; path = Sources/Extensions/FileExtensions.swift; sourceTree = "<group>"; };
+		B80D67B520B88307001ED402 /* CaptureOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOutput.swift; sourceTree = "<group>"; };
+		B80D67B720B88425001ED402 /* ContentProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentProcessor.swift; sourceTree = "<group>"; };
+		B80D67BB20B8989E001ED402 /* Aestheticam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Aestheticam-Bridging-Header.h"; path = "Sources/Aestheticam-Bridging-Header.h"; sourceTree = "<group>"; };
+		B80D67BC20B8989E001ED402 /* AESCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCamera.h; sourceTree = "<group>"; };
+		B80D67BD20B8989E001ED402 /* AESCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESCamera.m; sourceTree = "<group>"; };
 		B85362D61D1B9DA400EEBFF9 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		B864570920B61DF6002D68C9 /* CGFloat+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+RandomKit.swift"; sourceTree = "<group>"; };
 		B864570A20B61DF6002D68C9 /* CGPoint+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+RandomKit.swift"; sourceTree = "<group>"; };
@@ -156,7 +165,6 @@
 		B89547601D1B8E850025FBF0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B89547611D1B8E850025FBF0 /* ProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		B89547621D1B8E850025FBF0 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
-		B89547641D1B8E850025FBF0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = ../Models/Image.swift; sourceTree = "<group>"; };
 		B89547661D1B8E850025FBF0 /* AestheticApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AestheticApplication.swift; sourceTree = "<group>"; };
 		B89547671D1B8E850025FBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89547681D1B8E850025FBF0 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -375,6 +383,7 @@
 		B895475C1D1B8E630025FBF0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B80D67BB20B8989E001ED402 /* Aestheticam-Bridging-Header.h */,
 				B89F9CC61DEE66670024D263 /* Extensions */,
 				B895475E1D1B8E850025FBF0 /* Controllers */,
 				B89547651D1B8E850025FBF0 /* Other Sources */,
@@ -409,7 +418,6 @@
 			isa = PBXGroup;
 			children = (
 				B895476C1D1B8E850025FBF0 /* main.swift */,
-				B89547641D1B8E850025FBF0 /* Image.swift */,
 				B89547661D1B8E850025FBF0 /* AestheticApplication.swift */,
 				B89547671D1B8E850025FBF0 /* AppDelegate.swift */,
 				B89547681D1B8E850025FBF0 /* Colors.swift */,
@@ -421,6 +429,10 @@
 				B85362D61D1B9DA400EEBFF9 /* Analytics.swift */,
 				B89F9CC91DEE678B0024D263 /* FeedbackGenerator.swift */,
 				B89C2D0C20B785C000B1B10D /* ShittyExperience.swift */,
+				B80D67B520B88307001ED402 /* CaptureOutput.swift */,
+				B80D67B720B88425001ED402 /* ContentProcessor.swift */,
+				B80D67BC20B8989E001ED402 /* AESCamera.h */,
+				B80D67BD20B8989E001ED402 /* AESCamera.m */,
 			);
 			name = "Other Sources";
 			path = "Sources/Other Sources";
@@ -463,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				B89F9CC71DEE66780024D263 /* RandomExtensions.swift */,
+				B80D67B320B88125001ED402 /* FileExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -503,7 +516,7 @@
 					B89547461D1B8E120025FBF0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = ARSQN5BBHW;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -555,11 +568,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Aestheticam/Pods-Aestheticam-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ADTransitionController/ADTransitionController.framework",
-				"${BUILT_PRODUCTS_DIR}/FastttCamera/FastttCamera.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/LLSimpleCamera/LLSimpleCamera.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ShiftOperations/ShiftOperations.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/Threadly/Threadly.framework",
@@ -570,11 +582,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADTransitionController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastttCamera.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLSimpleCamera.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ShiftOperations.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Threadly.framework",
@@ -647,12 +658,14 @@
 				B864576620B61DF6002D68C9 /* ReseedingRandomGenerator.swift in Sources */,
 				B89547701D1B8E850025FBF0 /* CameraViewController.swift in Sources */,
 				B864575D20B61DF6002D68C9 /* Typecasting.swift in Sources */,
+				B80D67B420B88125001ED402 /* FileExtensions.swift in Sources */,
 				B864577720B61DF6002D68C9 /* Shuffleable.swift in Sources */,
 				B864576720B61DF6002D68C9 /* Seedable.swift in Sources */,
 				B864574520B61DF6002D68C9 /* CGFloat+RandomKit.swift in Sources */,
 				B864577420B61DF6002D68C9 /* RandomWithMax.swift in Sources */,
 				B864577520B61DF6002D68C9 /* RandomWithMaxWidth.swift in Sources */,
 				B89547721D1B8E850025FBF0 /* ReviewViewController.swift in Sources */,
+				B80D67B820B88425001ED402 /* ContentProcessor.swift in Sources */,
 				B85362D71D1B9DA400EEBFF9 /* Analytics.swift in Sources */,
 				B864575420B61DF6002D68C9 /* FloatingPoint+RandomKit.swift in Sources */,
 				B864574C20B61DF6002D68C9 /* Decimal+RandomKit.swift in Sources */,
@@ -673,6 +686,7 @@
 				B864577320B61DF6002D68C9 /* RandomWithExactWidth.swift in Sources */,
 				B89547711D1B8E850025FBF0 /* ProcessViewController.swift in Sources */,
 				B864574A20B61DF6002D68C9 /* Color+RandomKit.swift in Sources */,
+				B80D67BE20B8989E001ED402 /* AESCamera.m in Sources */,
 				B864576D20B61DF6002D68C9 /* RandomInRange.swift in Sources */,
 				B864574D20B61DF6002D68C9 /* NSArray+RandomKit.swift in Sources */,
 				B864576020B61DF6002D68C9 /* ARC4Random.swift in Sources */,
@@ -682,7 +696,6 @@
 				B864575620B61DF6002D68C9 /* Range+RandomKit.swift in Sources */,
 				B89547781D1B8E850025FBF0 /* ImageDownloader.swift in Sources */,
 				B864576F20B61DF6002D68C9 /* RandomRetrievable.swift in Sources */,
-				B89547731D1B8E850025FBF0 /* Image.swift in Sources */,
 				B864577920B61DF6002D68C9 /* UniqueShuffleable.swift in Sources */,
 				B864574720B61DF6002D68C9 /* CGRect+RandomKit.swift in Sources */,
 				B864577620B61DF6002D68C9 /* RandomWithMin.swift in Sources */,
@@ -695,6 +708,7 @@
 				B864574F20B61DF6002D68C9 /* Array+RandomKit.swift in Sources */,
 				B864575920B61DF6002D68C9 /* String+RandomKit.swift in Sources */,
 				B864576A20B61DF6002D68C9 /* Xorshift.swift in Sources */,
+				B80D67B620B88307001ED402 /* CaptureOutput.swift in Sources */,
 				B864576320B61DF6002D68C9 /* MersenneTwister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,14 +831,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ARSQN5BBHW;
 				INFOPLIST_FILE = Aestheticam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.aestheticam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aestheticam/Sources/Aestheticam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -835,14 +853,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ARSQN5BBHW;
 				INFOPLIST_FILE = Aestheticam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasleedesigns.aestheticam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aestheticam/Sources/Aestheticam-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -19,33 +19,13 @@ final class ProcessViewController: BaseController {
     
     // MARK: Properties
     
-    var image: UIImage? {
-        didSet {
-            reset()
-        }
-    }
-    
+    var content: CaptureOutput?
+    var output: CaptureOutput?
     
     // MARK: Private Properties
     
     private let imageView = UIImageView()
     private var lastImageTime = Date()
-    private var opQueue = OperationQueue()
-    private var processed = false
-    private var processor: ImageProcessor!
-    private var opMutex = DispatchSemaphore(value: 1)
-    private var operations: Int = 0
-    private var progress: Int = 0 {
-        didSet {
-            DispatchQueue.main.async {
-                self.opMutex.wait()
-                let prog = self.progress
-                let tot = self.operations
-                self.opMutex.signal()
-                self.handleProgress(prog, total: tot)
-            }
-        }
-    }
     
     // MARK: Lifecycle
     
@@ -56,120 +36,26 @@ final class ProcessViewController: BaseController {
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "shot_2")!)
         
-        opQueue.maxConcurrentOperationCount = 1
-        
         view.addSubview(imageView)
         imageView.autoPinEdgesToSuperviewEdges()
         imageView.image = ImageDownloader.sharedInstance.getRandomImage()
         
-        process()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        if let content = content {
+            ContentProcessor.process(input: content, progress: { completed, total in
+                self.handleProgress(completed, total: total)
+            }) { output in
+                self.output = output
+                self.performSegue(withIdentifier: "review", sender: self)
+            }
+        }
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? ReviewViewController, segue.identifier == "review" {
-            controller.image = processor.outputImage
-            controller.originalImage = image
+            controller.content = output
+            controller.original = content
         }
-    }
-    
-    // MARK: Queue
-    
-    private func enqueue(_ sleep: Bool = false, _ block: @escaping () -> ())  {
-        opMutex.wait()
-        let op = BlockOperation {
-            Synthesizer.shared.play()
-            block()
-            if sleep {
-                Thread.sleep(forTimeInterval: 0.02)
-            }
-            else {
-                Thread.sleep(forTimeInterval: 0.001)
-            }
-            Synthesizer.shared.stop()
-        }
-        op.completionBlock = {
-            self.opMutex.wait()
-            self.progress += 1
-            self.opMutex.signal()
-        }
-        operations += 1
-        opMutex.signal()
-        opQueue.addOperation(op)
-    }
-    
-    // MARK: Processing
-    
-    private func reset() {
-        processed = false
-        guard let i = image else {
-            processor = nil
-            return
-        }
-        processor = ImageProcessor(image: i)
-    }
-    
-    private func process() {
-        
-        guard !processed else {
-            return
-        }
-        
-        processed = true
-        
-        opQueue.isSuspended = true
-        
-        guard let p = processor else {
-            return
-        }
-        
-        let deepFry = Bool.random()
-        if deepFry {
-            for _ in 0 ..< Int.random(within: 10 ... 30) {
-                enqueue {
-                    p.apply(.deepFry)
-                }
-            }
-            enqueue {
-                p.apply(.overSaturate)
-            }
-        }
-        
-        enqueue {
-            p.apply(.starfield)
-        }
-        
-        for _ in 0 ..< Int.random(within: 0 ... 1000) {
-            enqueue {
-                p.apply(.sprinkle)
-            }
-        }
-        
-        for _ in 0 ..< Int.random(within: 1 ... 3) {
-            enqueue(true) {
-                Int.random(within: 0 ... 4) == 2 ? p.apply(.copy) : p.apply(.copyTint)
-            }
-        }
-        
-        for _ in 0 ..< Int.random(within: 1 ... 3) {
-            enqueue(true) {
-                p.apply(.faceMash)
-            }
-        }
-        
-        for _ in 0 ..< Int.random(within: 2 ... 5) {
-            enqueue(true) {
-                p.apply(.placeImage)
-            }
-        }
-        
-        opQueue.isSuspended = false
-        
     }
     
     private func handleProgress(_ completed: Int, total: Int) {
@@ -193,10 +79,6 @@ final class ProcessViewController: BaseController {
             imageView.center = CGPoint(x: CGFloat.random(within: 0.0...view.frame.width), y: CGFloat.random(within: 0.0...view.frame.height))
             view.addSubview(imageView)
             lastImageTime = Date()
-        }
-        
-        if completed == total {
-            performSegue(withIdentifier: "review", sender: self)
         }
     }
     

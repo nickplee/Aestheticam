@@ -3,14 +3,8 @@ PODS:
   - AudioKit (4.2.4):
     - AudioKit/UI (= 4.2.4)
   - AudioKit/UI (4.2.4)
-  - FastttCamera (0.3.4):
-    - FastttCamera/Default (= 0.3.4)
-  - FastttCamera/Default (0.3.4)
   - Firebase (3.17.0):
     - Firebase/Core (= 3.17.0)
-  - Firebase/AdMob (3.17.0):
-    - Firebase/Core
-    - Google-Mobile-Ads-SDK (= 7.19.1)
   - Firebase/Core (3.17.0):
     - FirebaseAnalytics (= 3.9.0)
     - FirebaseCore (= 3.6.0)
@@ -22,16 +16,12 @@ PODS:
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (1.0.10):
     - FirebaseCore (~> 3.6)
-  - Google-Mobile-Ads-SDK (7.19.1)
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
+  - LLSimpleCamera (4.2.0)
+  - MarqueeLabel/Swift (3.1.4)
   - PureLayout (3.0.2)
-  - Realm (3.5.0):
-    - Realm/Headers (= 3.5.0)
-  - Realm/Headers (3.5.0)
-  - RealmSwift (3.5.0):
-    - Realm (= 3.5.0)
   - ShiftOperations (1.0.2)
   - Then (2.3.0)
   - Threadly (1.2.0)
@@ -42,11 +32,10 @@ PODS:
 DEPENDENCIES:
   - ADTransitionController (from `https://github.com/nickplee/ADTransitionController.git`)
   - AudioKit (~> 4.2)
-  - FastttCamera (~> 0.3)
   - Firebase (~> 3.10)
-  - Firebase/AdMob
+  - LLSimpleCamera (~> 4.1)
+  - MarqueeLabel/Swift (~> 3.1.4)
   - PureLayout (~> 3.0)
-  - RealmSwift (~> 3.5)
   - ShiftOperations (~> 1.0.2)
   - Then (~> 2.1)
   - Threadly (~> 1.0)
@@ -57,16 +46,14 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AudioKit
-    - FastttCamera
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseInstanceID
-    - Google-Mobile-Ads-SDK
     - GoogleToolboxForMac
+    - LLSimpleCamera
+    - MarqueeLabel
     - PureLayout
-    - Realm
-    - RealmSwift
     - ShiftOperations
     - Then
     - Threadly
@@ -86,16 +73,14 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ADTransitionController: a1de96cc82a1d5db343e20bef539515cfacb6e9f
   AudioKit: 90ed0de2bc50ab68306f4b424ae1622fc9149b8e
-  FastttCamera: 51f16712cbd5bdb08bc6231b957325c6be5e478d
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
-  Google-Mobile-Ads-SDK: 43ac87810e4961f5093024d3525bfe022f956da3
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  LLSimpleCamera: ed7813ce4827ff3e34c6af159c99b5b56e54d1c6
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
-  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   ShiftOperations: 702c9aa98d3b20d98dceb71dd8437b562f7ab3ad
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   Threadly: b772ed7c1ff4a3f03eb4600bbc5ef83b3be5cb29
@@ -103,6 +88,6 @@ SPEC CHECKSUMS:
   UIImageSwiftExtensions: 4afd82e5cf14a351f4581e7587ead0c3d096d92a
   Vivid: 0fde7409beac71224deb151dd78f98a5bb860497
 
-PODFILE CHECKSUM: 4f351ea303df4ad915c3359ecb24e0bed784e61d
+PODFILE CHECKSUM: e9665c97633b734c11daebe0bcf7b11e75483ba1
 
 COCOAPODS: 1.5.0
